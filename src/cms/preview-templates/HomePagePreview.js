@@ -1,19 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { IndexPageTemplate } from '../../templates/index-page'
+import { HomePageTemplate } from '../../templates/home-page'
 
-const IndexPagePreview = ({ entry, widgetFor }) => (
-  <IndexPageTemplate
+const HomePagePreview = ({ entry, widgetFor }) => (
+  <HomePageTemplate
     title={entry.getIn(['data', 'title'])}
     content={widgetFor('body')}
   />
 )
 
-IndexPagePreview.propTypes = {
+HomePagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
   widgetFor: PropTypes.func,
 }
 
-export default IndexPagePreview
+export default HomePagePreview
