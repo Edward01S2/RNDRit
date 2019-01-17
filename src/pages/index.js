@@ -16,7 +16,7 @@ export default class IndexPage extends React.Component {
           <section id="hero" className="p-3">
             <div className="text-center">
               <h1 className="">{page.frontmatter.hero}</h1>
-              <p className="">{}</p>
+              <p className="">{page.frontmatter.headline}</p>
             </div>
           </section>
         </div>
