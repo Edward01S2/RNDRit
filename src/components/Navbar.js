@@ -22,13 +22,13 @@ const Navbar = class extends React.Component {
         role="navigation"
         aria-label="main-navigation"
       >
-        <div className="flex items-center flex-no-shrink text-black mr-6">
-          <span className="text-xl p-2">Tailwind CSS</span>
+        <div className="flex items-center flex-no-shrink text-black pt-2 pl-3 pb-2">
+          <svg className="h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 282.61 84.48"><title>rndr_logo</title><text transform="translate(0 64.16)" font-size="75" font-family="Roboto-Black, Roboto" font-weight="800">RNDR</text><text transform="translate(200.03 64.14)" font-size="50" font-family="OpenSans-Bold, Open Sans" font-weight="700">.it</text></svg>
         </div>
-        <div className="block md:hidden">
+        <div className="block pin-t pin-r absolute md:hidden">
           <button
             onClick={this.handleClick}
-            className="navbar-burger flex items-center px-4 py-3 bg-grey-lightest border-none focus:outline-none"
+            className="navbar-burger flex items-center px-6 py-5 bg-grey-lightest border-none focus:outline-none"
             data-target="navMenu"
           >
             {menuBtn ? (
@@ -59,7 +59,7 @@ const Navbar = class extends React.Component {
             (menuBtn ? "block" : "hidden")
           }
         >
-          <div className="md:flex-grow text-center bg-grey-lightest font-open py-4 sm:bg-white">
+          <div className="text-lg md:flex-grow text-center bg-grey-lightest font-open py-8 sm:bg-white">
             <Link
               to="/about"
               className="nav-item block text-grey-darker sm:inline-block sm:mt-0 sm:mr-4 no-underline"
@@ -68,13 +68,13 @@ const Navbar = class extends React.Component {
             </Link>
             <Link
               to="/blog"
-              className="nav-item block mt-4 text-grey-darker sm:inline-block sm:mt-0 sm:mr-4 no-underline"
+              className="nav-item block mt-8 text-grey-darker sm:inline-block sm:mt-0 sm:mr-4 no-underline"
             >
               work
             </Link>
             <Link
               to="/contact"
-              className="nav-item block mt-4 text-grey-darker sm:inline-block sm:mt-0 no-underline"
+              className="nav-item block mt-8 text-grey-darker sm:inline-block sm:mt-0 no-underline"
             >
               let's talk
             </Link>
