@@ -51,13 +51,13 @@ HomePage.propTypes = {
 
 export default HomePage
 
-export const homePageQuery = graphql`
-  query HomePage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      html
-      frontmatter {
-        hero
-      }
-    }
-  }
-`
+// export const homePageQuery = graphql`
+//   query HomePage($id: String!) {
+//     markdownRemark(id: { eq: $id }) {
+//       html
+//       frontmatter {
+//         hero
+//       }
+//     }
+//   }
+// `
