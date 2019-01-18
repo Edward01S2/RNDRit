@@ -7,9 +7,7 @@ import React from 'react'
 export const HomePageTemplate = () => {
 
   return (
-    <section className="section section--gradient">
-      <div>Here</div>
-    </section>
+    <div></div>
   )
 }
 
@@ -22,7 +20,7 @@ export const HomePageTemplate = () => {
 const HomePage = () => {
   return (
     <HomePageTemplate>
-        <div>Test</div>
+        <div></div>
     </HomePageTemplate>
     
   )
