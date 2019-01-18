@@ -1,5 +1,6 @@
 ---
-templateKey: home-page
+templateKey: 'home-page'
+path: /home
 hero:
   heading: Rendering digital services
   description: >-

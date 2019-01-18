@@ -15,8 +15,8 @@ export default class IndexPage extends React.Component {
         <div className="container mx-auto">
           <section id="hero" className="p-3">
             <div className="text-center">
-              <h1 className="">{page.frontmatter.headline}</h1>
-              <p className="">{page.frontmatter.headline}</p>
+              <h1 className="">{page.frontmatter.heading}</h1>
+              <p className="">{page.frontmatter.description}</p>
             </div>
           </section>
         </div>
@@ -40,7 +40,7 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             hero {
-              headline
+              heading
               description
             }
           }
