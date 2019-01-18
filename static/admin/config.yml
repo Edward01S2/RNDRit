@@ -49,6 +49,6 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "home-page"}
           # - {label: Hero, name: hero, widget: object, fields:[{label: Hero Text, name: hero, widget: string}, {label: Hero Headline, name: headline, widget: string}]}
-          - {label: Hero, name: hero, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}]}
+          - {label: Hero, name: herobox, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}]}
           - {label: Hero Text, name: hero, widget: string}
           - {label: Hero Headline, name: headline, widget: string}
