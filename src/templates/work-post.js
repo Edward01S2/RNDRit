@@ -59,7 +59,7 @@ const WorkPost = ({ data }) => {
 
   return (
     <Layout>
-      <BlogPostTemplate
+      <WorkPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}

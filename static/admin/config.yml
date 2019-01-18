@@ -25,7 +25,7 @@ collections:
       - { label: "Tags", name: "tags", widget: "list" }
 
   - name: "work"
-    label: "work"
+    label: "Work"
     folder: "src/pages/work"
     create: true
     slug: "{{slug}}"
@@ -38,7 +38,7 @@ collections:
         }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "text" }
-      - { label: "Link", name: "link", widget: "string" }
+      - { label: Link, name: link, widget: string }
       - { label: Image, name: image, widget: image }
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Body", name: "body", widget: "markdown" }
