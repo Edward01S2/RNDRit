@@ -20,7 +20,7 @@ export const HomePageTemplate = () => {
 const HomePage = () => {
   return (
     <HomePageTemplate>
-        <div></div>
+        <div>Test</div>
     </HomePageTemplate>
     
   )
