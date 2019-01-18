@@ -19,22 +19,20 @@ export const HomePageTemplate = () => {
 //   //contentComponent: PropTypes.func,
 // }
 
-// const HomePage = ({ data }) => {
-//   const { markdownRemark: post } = data
-
-//   return (
-//     <Layout>
-//       <HomePageTemplate
-//       />
-//     </Layout>
-//   )
-// }
+const HomePage = () => {
+  return (
+    <HomePageTemplate>
+        <div>Test</div>
+    </HomePageTemplate>
+    
+  )
+}
 
 // HomePage.propTypes = {
 //   data: PropTypes.object.isRequired,
 // }
 
-//export default HomePage
+export default HomePage
 
 // export const homePageQuery = graphql`
 //   query HomePage($id: String!) {
