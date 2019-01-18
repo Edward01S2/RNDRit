@@ -6,8 +6,8 @@ import Layout from '../components/Layout'
 export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props
-    const { edges: nodes } = data.allMarkdownRemark
-    const page = nodes[0].node
+    const { edges: posts } = data.allMarkdownRemark
+    const page = posts[0].node
     //console.log(page);
 
     return (

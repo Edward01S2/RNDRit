@@ -23,7 +23,7 @@ const Navbar = class extends React.Component {
         aria-label="main-navigation"
       >
         <div className="flex items-center flex-no-shrink text-black pt-2 pl-3 pb-2">
-          <svg className="h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 282.61 84.48"><title>rndr_logo</title><text transform="translate(0 64.16)" font-size="75" font-family="Roboto-Black, Roboto" font-weight="800">RNDR</text><text transform="translate(200.03 64.14)" font-size="50" font-family="OpenSans-Bold, Open Sans" font-weight="700">.it</text></svg>
+          <svg className="h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 282.61 84.48"><title>rndr_logo</title><text transform="translate(0 64.16)" fontSize="75" fontFamily="Roboto-Black, Roboto" fontWeight="800">RNDR</text><text transform="translate(200.03 64.14)" fontSize="50" fontFamily="OpenSans-Bold, Open Sans" fontWeight="700">.it</text></svg>
         </div>
         <div className="block pin-t pin-r absolute md:hidden">
           <button
