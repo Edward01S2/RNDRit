@@ -216,7 +216,7 @@ collections:
                         { label: Icon, name: icon, widget: string },
                         { label: Title, name: title, widget: string },
                         { label: Description, name: description, widget: text },
-                        { label: Link, name: link, widget: text },
+                        { label: Link, name: link, widget: string },
                       ],
                   },
                 ],
