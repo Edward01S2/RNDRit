@@ -180,7 +180,6 @@ collections:
               widget: "hidden",
               default: "home-page",
             }
-          # - {label: Hero, name: hero, widget: object, fields:[{label: Hero Text, name: hero, widget: string}, {label: Hero Headline, name: headline, widget: string}]}
           - {
               label: Hero,
               name: hero,
@@ -188,6 +187,48 @@ collections:
               fields:
                 [
                   { label: Heading, name: heading, widget: string },
+                  { label: Description, name: description, widget: text },
+                ],
+            }
+          - {
+              label: Development,
+              name: dev,
+              widget: object,
+              fields:
+                [
+                  { label: Sub-Headline, name: sub, widget: string },
+                  { label: Heading, name: head, widget: string },
+                  { label: Description, name: description, widget: text },
+                ],
+            }
+          - {
+              label: Feature,
+              name: feature,
+              widget: list,
+              fields:
+                [
+                  {
+                    label: Card,
+                    name: card,
+                    widget: object,
+                    fields:
+                      [
+                        { label: Icon, name: icon, widget: string },
+                        { label: Title, name: title, widget: string },
+                        { label: Description, name: description, widget: text },
+                        { label: Link, name: link, widget: text },
+                      ],
+                  },
+                ],
+            }
+          - {
+              label: IT,
+              name: it,
+              widget: object,
+              fields:
+                [
+                  { label: Sub-Headline, name: sub, widget: string },
+                  { label: Heading, name: head, widget: string },
                   { label: Description, name: description, widget: text },
                 ],
             }

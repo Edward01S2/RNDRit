@@ -10,10 +10,10 @@ export default class IndexPage extends React.Component {
     const { data } = this.props;
     const hero = data.hero.edges[0].node.frontmatter.hero;
     const work = data.work.edges[0].node.frontmatter;
-    const tags = work.tags.map(tag => {
-      return <p className="pl-4">{tag}</p>;
+    const tags = work.tags.map((tag, index) => {
+      return <p key={index} className="pl-4">{tag}</p>;
     });
-    console.log(work);
+    //console.log(work);
 
     return (
       <Layout>
@@ -57,8 +57,8 @@ export default class IndexPage extends React.Component {
                 </div>
               </div>
               <div className="bg-blue-darkest font-robot text-grey-lightest px-4 py-12">
-                <h3 className="text-3xl font-bold pb-4">{work.title}</h3>
-                <p className="leading-normal pb-4">{work.description}</p>
+                <h3 className="text-3xl font-bold pb-4 text-blue-lightest">{work.title}</h3>
+                <p className="leading-normal pb-4 text-blue-lighter">{work.description}</p>
                 <div className="flex pb-6 text-grey-dark">
                   <svg
                     className="fill-current h-4 w-4"
