@@ -118,7 +118,7 @@ export default class IndexPage extends React.Component {
             <div className="px-4 py-8">
               {feat.map(({ card }) => (
                 <div key={uuid.v4()} className="p-4 mb-4">
-                  <h4 className="text-xl pb-4"><span className="h-5">{card.icon}</span>{card.title}</h4>
+                  <h4 className="text-xl pb-4"><span className="h-5" dangerouslySetInnerHTML={card.icon}></span>{card.title}</h4>
                   <p className="text-blue-lighter leading-normal">{card.description}</p>
                 </div>
               ))}
