@@ -4,28 +4,37 @@ import { Link, graphql } from "gatsby";
 import Layout from "../components/Layout";
 //import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import Img from "gatsby-image";
+import uuid from "uuid";
 
 export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props;
-    const hero = data.hero.edges[0].node.frontmatter.hero;
+    const hero = data.front.edges[0].node.frontmatter.hero;
     const work = data.work.edges[0].node.frontmatter;
-    const tags = work.tags.map((tag, index) => {
-      return <p key={index} className="pl-4">{tag}</p>;
+    const dev = data.front.edges[0].node.frontmatter.dev;
+    const feat = data.front.edges[0].node.frontmatter.feature;
+    //console.log(feat);
+    const tags = work.tags.map((tag) => {
+      return (
+        <p key={uuid.v4()} className="pl-4">
+          {tag}
+        </p>
+      );
     });
     //console.log(work);
 
     return (
       <Layout>
-        <div className="container mx-auto px-4">
-          <section id="hero" className="py-48">
-            <div className="text-center font-robot">
-              <h1 className="font-black">{hero.heading}</h1>
-              <p className="pt-5 px-3">{hero.description}</p>
+        <div className="container mx-auto">
+
+          <section id="hero" className="py-32 px-4">
+            <div className="font-robot">
+              <h1 className="font-black text-5xl">{hero.heading}</h1>
+              <p className="pt-4 text-xl leading-normal">{hero.description}</p>
             </div>
           </section>
 
-          <section id="latest-work">
+          <section id="latest-work" className="px-4">
             <div>
               <div>
                 <Img fluid={work.image.childImageSharp.fluid} />
@@ -40,7 +49,7 @@ export default class IndexPage extends React.Component {
                   <div>
                     <Link
                       to="/work"
-                      className="text-grey-light text-sm no-underline flex items-center"
+                      className="text-grey-light tracking-wide text-sm no-underline flex items-center"
                     >
                       <span>See All</span>
                       <span className="pl-3">
@@ -56,10 +65,14 @@ export default class IndexPage extends React.Component {
                   </div>
                 </div>
               </div>
-              <div className="bg-blue-darkest font-robot text-grey-lightest px-4 py-12">
-                <h3 className="text-3xl font-bold pb-4 text-blue-lightest">{work.title}</h3>
-                <p className="leading-normal pb-4 text-blue-lighter">{work.description}</p>
-                <div className="flex pb-6 text-grey-dark">
+              <div className="bg-blue-darkest font-robot px-4 py-12">
+                <h3 className="text-3xl font-bold pb-4 text-blue-lightest">
+                  {work.title}
+                </h3>
+                <p className="leading-normal pb-4 text-blue-lighter">
+                  {work.description}
+                </p>
+                <div className="flex pb-6 text-grey-dark text-sm">
                   <svg
                     className="fill-current h-4 w-4"
                     xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +85,7 @@ export default class IndexPage extends React.Component {
 
                 <div>
                   <a
-                    className="bg-blue hover:bg-blue-dark text-white py-2 px-6 rounded no-underline inline-flex items-center"
+                    className="bg-blue-dark hover:bg-blue-dark text-white py-2 px-6 rounded no-underline inline-flex items-center"
                     href={work.link}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -90,6 +103,29 @@ export default class IndexPage extends React.Component {
               </div>
             </div>
           </section>
+
+          <section id="development" className="py-24 px-4">
+            <div>
+              <p className="font-open uppercase text-xs tracking-wide pb-4">{dev.sub}</p>
+              <h3 className="font-robot text-4xl font-bold w-24 border-l-4 border-blue-dark pl-4">{dev.head}</h3>
+            </div>
+            <div>
+              <p className="font-semibold opacity-50 leading-normal pt-4 ">{dev.description} </p>
+            </div>
+          </section>
+
+          <section id="featured" className="bg-blue-dark text-white text-shadow">
+            <div className="px-4 py-8">
+              {feat.map(({ card }) => (
+                <div key={uuid.v4()} className="p-4 mb-4">
+                  {/* <p>{card.icon}</p> */}
+                  <h4 className="text-xl pb-4">{card.title}</h4>
+                  <p className="text-blue-lighter leading-normal">{card.description}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
         </div>
       </Layout>
     );
@@ -106,8 +142,7 @@ IndexPage.propTypes = {
 
 export const pageQuery = graphql`
   query IndexPage {
-    hero: allMarkdownRemark(
-      limit: 1
+    front: allMarkdownRemark(
       filter: { frontmatter: { templateKey: { eq: "home-page" } } }
     ) {
       edges {
@@ -116,6 +151,19 @@ export const pageQuery = graphql`
             hero {
               heading
               description
+            }
+            dev {
+              sub
+              head
+              description
+            }
+            feature {
+              card {
+                icon
+                title
+                description
+                link
+              }
             }
           }
         }
