@@ -161,7 +161,6 @@ export const pageQuery = graphql`
                 icon
                 title
                 description
-                link
               }
             }
           }
