@@ -213,7 +213,7 @@ collections:
                     widget: object,
                     fields:
                       [
-                        { label: Icon, name: icon, widget: text },
+                        { label: Icon, name: icon, widget: image },
                         { label: Title, name: title, widget: string },
                         { label: Description, name: description, widget: text },
                       ],
