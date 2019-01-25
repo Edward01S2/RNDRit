@@ -18,22 +18,22 @@ feature:
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation.
-      icon: /img/chart-bar.svg
+      icon: ''
       title: Strategy
   - card:
       description: >-
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation.
-      icon: example
-      title: React Development
+      icon: ''
+      title: Creative
   - card:
       description: >-
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation.
-      icon: example
-      title: Three Development
+      icon: ''
+      title: Technology
 it:
   description: >-
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
