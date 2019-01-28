@@ -139,14 +139,11 @@ export default class IndexPage extends React.Component {
               <p className="font-open uppercase text-xs tracking-wide pb-4">
                 Articles
               </p>
-              <h3
-                className={`font-robot text-3xl font-normal`}
-              >
+              <h3 className={`font-robot text-3xl font-normal`}>
                 Lastest Posts
               </h3>
             </div>
           </section>
-
         </div>
       </Layout>
     );
@@ -212,6 +209,24 @@ export const pageQuery = graphql`
               }
             }
             tags
+          }
+        }
+      }
+    }
+
+    blog: allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+    ) {
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            date(formatString: "MMMM DD")
           }
         }
       }
