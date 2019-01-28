@@ -215,7 +215,12 @@ collections:
                       [
                         { label: Icon, name: icon, widget: text },
                         { label: Title, name: title, widget: string },
-                        { label: Description, name: description, widget: text },
+                        {
+                          label: List,
+                          name: list,
+                          widget: list,
+                          field: { label: Text, name: text, widget: string },
+                        },
                       ],
                   },
                 ],

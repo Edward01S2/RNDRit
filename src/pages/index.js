@@ -14,7 +14,7 @@ export default class IndexPage extends React.Component {
     const dev = data.front.edges[0].node.frontmatter.dev;
     const feat = data.front.edges[0].node.frontmatter.feature;
     //console.log(feat);
-    const tags = work.tags.map((tag) => {
+    const tags = work.tags.map(tag => {
       return (
         <p key={uuid.v4()} className="pl-4">
           {tag}
@@ -23,14 +23,13 @@ export default class IndexPage extends React.Component {
     });
 
     function createMarkup(cms) {
-      return {__html: cms};
+      return { __html: cms };
     }
     //console.log(work);
 
     return (
       <Layout>
         <div className="container mx-auto">
-
           <section id="hero" className="py-32 px-4">
             <div className="font-robot">
               <h1 className="font-black text-5xl">{hero.heading}</h1>
@@ -110,25 +109,45 @@ export default class IndexPage extends React.Component {
 
           <section id="development" className="py-24 px-4">
             <div>
-              <p className="font-open uppercase text-xs tracking-wide pb-4">{dev.sub}</p>
-              <h3 className="font-robot text-4xl font-bold w-24 border-l-4 border-blue-dark pl-4">{dev.head}</h3>
+              <p className="font-open uppercase text-xs tracking-wide pb-4">
+                {dev.sub}
+              </p>
+              <h3 className="font-robot text-4xl font-bold w-24 border-l-4 border-blue-dark pl-4">
+                {dev.head}
+              </h3>
             </div>
             <div>
-              <p className="font-semibold opacity-50 leading-normal pt-4 ">{dev.description} </p>
+              <p className="font-semibold opacity-50 leading-normal pt-4 ">
+                {dev.description}{" "}
+              </p>
             </div>
           </section>
 
-          <section id="featured" className="bg-blue-dark text-white text-shadow">
+          <section
+            id="featured"
+            className="bg-blue-dark text-white text-shadow"
+          >
             <div className="px-4 py-8">
               {feat.map(({ card }) => (
                 <div key={uuid.v4()} className="p-4 mb-4">
-                  <h4 className="text-xl pb-4"><span className="h-5" dangerouslySetInnerHTML={createMarkup(card.icon)}></span>{card.title}</h4>
-                  <p className="text-blue-lighter leading-normal">{card.description}</p>
+                  <h4 className="text-xl pb-4 inline-flex items-center content-center">
+                    <svg
+                      className="h-8 fill-current"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      dangerouslySetInnerHTML={createMarkup(card.icon)}
+                    >
+                      
+                    </svg>
+                    <span className="pl-3">{card.title}</span>
+                  </h4>
+                  <p className="text-blue-lighter leading-normal">
+                    {card.description}
+                  </p>
                 </div>
               ))}
             </div>
           </section>
-
         </div>
       </Layout>
     );
