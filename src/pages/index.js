@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 import Layout from "../components/Layout";
+import Tech from "../components/Tech";
 //import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import Img from "gatsby-image";
 import uuid from "uuid";
@@ -13,19 +14,11 @@ export default class IndexPage extends React.Component {
     const work = data.work.edges[0].node.frontmatter;
     const dev = data.front.edges[0].node.frontmatter.dev;
     const feat = data.front.edges[0].node.frontmatter.feature;
-    //console.log(feat);
-    const tags = work.tags.map(tag => {
-      return (
-        <p key={uuid.v4()} className="pl-4">
-          {tag}
-        </p>
-      );
-    });
+    const it = data.front.edges[0].node.frontmatter.it;
 
     function createMarkup(cms) {
       return { __html: cms };
     }
-    //console.log(work);
 
     return (
       <Layout>
@@ -83,7 +76,11 @@ export default class IndexPage extends React.Component {
                   >
                     <path d="M10 1l10 6-10 6L0 7l10-6zm6.67 10L20 13l-10 6-10-6 3.33-2L10 15l6.67-4z" />
                   </svg>
-                  {tags}
+                  {work.tags.map(tag => (
+                    <p key={uuid.v4()} className="pl-4">
+                      {tag}
+                    </p>
+                  ))}
                 </div>
 
                 <div>
@@ -107,46 +104,49 @@ export default class IndexPage extends React.Component {
             </div>
           </section>
 
-          <section id="development" className="py-24 px-4">
-            <div>
-              <p className="font-open uppercase text-xs tracking-wide pb-4">
-                {dev.sub}
-              </p>
-              <h3 className="font-robot text-4xl font-bold w-24 border-l-4 border-blue-dark pl-4">
-                {dev.head}
-              </h3>
-            </div>
-            <div>
-              <p className="font-semibold opacity-50 leading-normal pt-4 ">
-                {dev.description}{" "}
-              </p>
-            </div>
-          </section>
+          <Tech data={dev} width={24} />
 
           <section
             id="featured"
-            className="bg-blue-dark text-white text-shadow"
+            className="bg-blue-dark text-white text-shadow text-center"
           >
-            <div className="px-4 py-8">
+            <div className="px-4 py-16">
               {feat.map(({ card }) => (
                 <div key={uuid.v4()} className="p-4 mb-4">
                   <h4 className="text-xl pb-4 inline-flex items-center content-center">
                     <svg
-                      className="h-8 fill-current"
+                      className="h-6 fill-current"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
                       dangerouslySetInnerHTML={createMarkup(card.icon)}
-                    >
-                      
-                    </svg>
+                    />
                     <span className="pl-3">{card.title}</span>
                   </h4>
-                  <p className="text-blue-lighter leading-normal">
-                  </p>
+                  <ul className="text-blue-lighter leading-loose list-reset">
+                    {card.list.map(item => (
+                      <li key={uuid.v4()}>{item}</li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>
           </section>
+
+          <Tech data={it} width={36} />
+
+          <section className="py-24 px-4 bg-blue-darkest text-white">
+            <div>
+              <p className="font-open uppercase text-xs tracking-wide pb-4">
+                Articles
+              </p>
+              <h3
+                className={`font-robot text-3xl font-normal`}
+              >
+                Lastest Posts
+              </h3>
+            </div>
+          </section>
+
         </div>
       </Layout>
     );
@@ -182,7 +182,13 @@ export const pageQuery = graphql`
               card {
                 icon
                 title
+                list
               }
+            }
+            it {
+              sub
+              head
+              description
             }
           }
         }
