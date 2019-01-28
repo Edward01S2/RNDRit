@@ -30,14 +30,20 @@ feature:
         1 0 2.82L9 16.66zM0 1.99C0 .9.89 0 2 0h4a2 2 0 0 1 2 2v16a2 2 0 0 1-2
         2H2a2 2 0 0 1-2-2V2zM4 17a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
       list:
-        - test
+        - Branding & Art Direction
+        - Interactive Design
+        - Illustration / Animation
+        - User Experience
       title: Creative
   - card:
       icon: >-
         <path d="M18 16h2v1a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1v-1h2V4c0-1.1.9-2
         2-2h12a2 2 0 0 1 2 2v12zM4 4v9h12V4H4zm4 11v1h4v-1H8z"/>
       list:
-        - test
+        - HTML / CSS / JavaScript
+        - React / Redux
+        - PHP / Laravel
+        - DevOps / CD / CI
       title: Technology
 it:
   description: >-
