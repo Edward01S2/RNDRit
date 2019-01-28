@@ -142,7 +142,6 @@ export default class IndexPage extends React.Component {
                     <span className="pl-3">{card.title}</span>
                   </h4>
                   <p className="text-blue-lighter leading-normal">
-                    {card.description}
                   </p>
                 </div>
               ))}
@@ -183,7 +182,6 @@ export const pageQuery = graphql`
               card {
                 icon
                 title
-                description
               }
             }
           }
