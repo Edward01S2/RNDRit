@@ -16,6 +16,8 @@ export default class IndexPage extends React.Component {
     const feat = data.front.edges[0].node.frontmatter.feature;
     const it = data.front.edges[0].node.frontmatter.it;
 
+    const { edges: posts } = data.blog;
+
     function createMarkup(cms) {
       return { __html: cms };
     }
@@ -134,14 +136,42 @@ export default class IndexPage extends React.Component {
 
           <Tech data={it} width={36} />
 
-          <section className="py-24 px-4 bg-blue-darkest text-white">
+          <section className="py-16 px-4 bg-blue-darkest text-white">
             <div>
               <p className="font-open uppercase text-xs tracking-wide pb-4">
                 Articles
               </p>
-              <h3 className={`font-robot text-3xl font-normal`}>
+              <h3 className={`font-robot text-3xl font-bold pb-8 tracking-wide`}>
                 Lastest Posts
               </h3>
+              <div>
+                {posts.map(({ node: post }) => (
+                  <div
+                    className="no-underline bg-white text-black p-4 mb-4"
+                    key={post.id}
+                  >
+                    <p className="text-xs pb-4 text-blue-darker uppercase font-open font-semibold">
+                      {post.frontmatter.date}
+                    </p>
+                    <p className="pb-4 font-robot font-bold text-xl border-b">
+                      <Link
+                        className="no-underline text-blue-darkest"
+                        to={post.fields.slug}
+                      >
+                        {post.frontmatter.title}
+                      </Link>
+                    </p>
+                    <p className="pt-2">
+                      <Link
+                        className="no-underline text-xs text-grey-darker"
+                        to={post.fields.slug}
+                      >
+                        Read More <span><svg className="h-2 pl-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M16.172 9l-6.071-6.071 1.414-1.414L20 10l-.707.707-7.778 7.778-1.414-1.414L16.172 11H0V9z"/></svg></span>
+                      </Link>
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
           </section>
         </div>
@@ -215,6 +245,7 @@ export const pageQuery = graphql`
     }
 
     blog: allMarkdownRemark(
+      limit: 3
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
     ) {
@@ -226,7 +257,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
-            date(formatString: "MMMM DD")
+            date(formatString: "MMM DD")
           }
         }
       }

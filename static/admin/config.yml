@@ -170,7 +170,7 @@ collections:
       #             },
       #           ],
       #       }
-      
+
       - file: "src/pages/home/index.md"
         label: "Home"
         name: "home"
