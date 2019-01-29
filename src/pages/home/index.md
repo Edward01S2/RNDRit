@@ -52,5 +52,12 @@ it:
     quis nostrud exercitation.
   head: Managed IT & Support Solutions
   sub: Technology
+contact:
+  button: Get in touch
+  description: >-
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt.
+  head: Let's work together
+  sub: Contact Us
 ---
 
