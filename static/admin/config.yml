@@ -232,7 +232,7 @@ collections:
                   { label: Description, name: description, widget: text },
                 ],
             }
-            - {
+          - {
               label: Contact,
               name: contact,
               widget: object,
