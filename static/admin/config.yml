@@ -232,3 +232,15 @@ collections:
                   { label: Description, name: description, widget: text },
                 ],
             }
+            - {
+              label: Contact,
+              name: contact,
+              widget: object,
+              fields:
+                [
+                  { label: Sub-Headline, name: sub, widget: string },
+                  { label: Heading, name: head, widget: string },
+                  { label: Description, name: description, widget: text },
+                  { label: Button, name: button, widget: string },
+                ],
+            }

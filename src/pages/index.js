@@ -136,44 +136,70 @@ export default class IndexPage extends React.Component {
 
           <Tech data={it} width={36} />
 
-          <section className="py-16 px-4 bg-blue-darkest text-white">
+          <section className="py-16 px-4 bg-grey-lighter">
             <div>
-              <p className="font-open uppercase text-xs tracking-wide pb-4">
-                Articles
-              </p>
-              <h3 className={`font-robot text-3xl font-bold pb-8 tracking-wide`}>
-                Lastest Posts
-              </h3>
+              <div className="text-center">
+                <p className="font-open uppercase text-xs tracking-wide pb-4">
+                  Articles
+                </p>
+                <h3
+                  className={`font-robot text-3xl font-bold pb-8 tracking-wide`}
+                >
+                  Lastest Posts
+                </h3>
+              </div>
+
               <div>
                 {posts.map(({ node: post }) => (
-                  <div
-                    className="no-underline bg-white text-black p-4 mb-4"
-                    key={post.id}
-                  >
-                    <p className="text-xs pb-4 text-blue-darker uppercase font-open font-semibold">
-                      {post.frontmatter.date}
-                    </p>
-                    <p className="pb-4 font-robot font-bold text-xl border-b">
-                      <Link
-                        className="no-underline text-blue-darkest"
-                        to={post.fields.slug}
-                      >
+                  <Link className="no-underline" to={post.fields.slug}>
+                    <div
+                      className="no-underline bg-white rounded-sm shadow shadow-md text-black p-4 mb-4"
+                      key={post.id}
+                    >
+                      <p className="text-xs pb-4 text-blue-darker uppercase font-open font-semibold">
+                        {post.frontmatter.date}
+                      </p>
+                      <p className="pb-4 font-robot font-bold text-xl border-b text-blue-darkest">
                         {post.frontmatter.title}
-                      </Link>
-                    </p>
-                    <p className="pt-2">
-                      <Link
-                        className="no-underline text-xs text-grey-darker"
-                        to={post.fields.slug}
-                      >
-                        Read More <span><svg className="h-2 pl-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M16.172 9l-6.071-6.071 1.414-1.414L20 10l-.707.707-7.778 7.778-1.414-1.414L16.172 11H0V9z"/></svg></span>
-                      </Link>
-                    </p>
-                  </div>
+                      </p>
+                      <p className="pt-3 no-underline text-xs text-grey-darker">
+                        Read More{" "}
+                        <span>
+                          <svg
+                            className="h-2 pl-2 fill-current"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                          >
+                            <path d="M16.172 9l-6.071-6.071 1.414-1.414L20 10l-.707.707-7.778 7.778-1.414-1.414L16.172 11H0V9z" />
+                          </svg>
+                        </span>
+                      </p>
+                    </div>
+                  </Link>
                 ))}
               </div>
             </div>
           </section>
+
+          <section id="contact" className="py-24 px-4">
+          <div className="text-center">
+                <p className="font-open uppercase text-xs tracking-wide pb-4">
+                  Contact Us
+                </p>
+                <h3
+                  className={`font-robot text-3xl font-bold pb-4 tracking normal`}
+                >
+                  Let's work together
+                </h3>
+                <p className="font-semibold opacity-50 leading-normal pb-8">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                </p>
+                <Link to="" className="bg-blue hover:bg-blue-dark text-white py-2 px-6 rounded no-underline inline-flex items-center">
+                  Get in touch
+                </Link>
+              </div>
+          </section>
+
         </div>
       </Layout>
     );
