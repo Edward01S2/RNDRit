@@ -15,6 +15,7 @@ export default class IndexPage extends React.Component {
     const dev = data.front.edges[0].node.frontmatter.dev;
     const feat = data.front.edges[0].node.frontmatter.feature;
     const it = data.front.edges[0].node.frontmatter.it;
+    const cont = data.front.edges[0].node.frontmatter.contact;
 
     const { edges: posts } = data.blog;
 
@@ -136,8 +137,8 @@ export default class IndexPage extends React.Component {
 
           <Tech data={it} width={36} />
 
-          <section className="py-16 px-4 bg-grey-lighter">
-            <div>
+          <section className="bg-grey-lighter">
+            <div className="py-16 px-4">
               <div className="text-center">
                 <p className="font-open uppercase text-xs tracking-wide pb-4">
                   Articles
@@ -151,10 +152,9 @@ export default class IndexPage extends React.Component {
 
               <div>
                 {posts.map(({ node: post }) => (
-                  <Link className="no-underline" to={post.fields.slug}>
+                  <Link className="no-underline" to={post.fields.slug} key={post.id}>
                     <div
-                      className="no-underline bg-white rounded-sm shadow shadow-md text-black p-4 mb-4"
-                      key={post.id}
+                      className="no-underline bg-white rounded-sm shadow shadow-md text-black p-4 mb-8 border-l-4 border-blue"
                     >
                       <p className="text-xs pb-4 text-blue-darker uppercase font-open font-semibold">
                         {post.frontmatter.date}
@@ -182,22 +182,25 @@ export default class IndexPage extends React.Component {
           </section>
 
           <section id="contact" className="py-24 px-4">
-          <div className="text-center">
-                <p className="font-open uppercase text-xs tracking-wide pb-4">
-                  Contact Us
-                </p>
-                <h3
-                  className={`font-robot text-3xl font-bold pb-4 tracking normal`}
-                >
-                  Let's work together
-                </h3>
-                <p className="font-semibold opacity-50 leading-normal pb-8">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-                </p>
-                <Link to="" className="bg-blue hover:bg-blue-dark text-white py-2 px-6 rounded no-underline inline-flex items-center">
-                  Get in touch
-                </Link>
-              </div>
+            <div className="text-center">
+              <p className="font-open uppercase text-xs tracking-wide pb-4">
+                {cont.sub}
+              </p>
+              <h3
+                className={`font-robot text-3xl font-bold pb-4 tracking normal`}
+              >
+                {cont.head}
+              </h3>
+              <p className="font-semibold opacity-50 leading-normal pb-8">
+                {cont.description}
+              </p>
+              <Link
+                to="/about"
+                className="bg-blue hover:bg-blue-dark text-white py-2 px-6 rounded no-underline inline-flex items-center"
+              >
+                {cont.button}
+              </Link>
+            </div>
           </section>
 
         </div>
@@ -242,6 +245,12 @@ export const pageQuery = graphql`
               sub
               head
               description
+            }
+            contact {
+              sub
+              head
+              description
+              button
             }
           }
         }
