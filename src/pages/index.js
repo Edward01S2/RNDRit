@@ -152,10 +152,12 @@ export default class IndexPage extends React.Component {
 
               <div>
                 {posts.map(({ node: post }) => (
-                  <Link className="no-underline" to={post.fields.slug} key={post.id}>
-                    <div
-                      className="no-underline bg-white rounded-sm shadow shadow-md text-black p-4 mb-8 border-l-4 border-blue"
-                    >
+                  <Link
+                    className="no-underline"
+                    to={post.fields.slug}
+                    key={post.id}
+                  >
+                    <div className="no-underline bg-white rounded-sm shadow shadow-md text-black p-4 mb-8 border-l-4 border-blue">
                       <p className="text-xs pb-4 text-blue-darker uppercase font-open font-semibold">
                         {post.frontmatter.date}
                       </p>
@@ -202,7 +204,6 @@ export default class IndexPage extends React.Component {
               </Link>
             </div>
           </section>
-
         </div>
       </Layout>
     );
