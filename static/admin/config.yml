@@ -132,16 +132,10 @@ collections:
                   { label: Button, name: button, widget: string },
                 ],
             }
-      - file: "src/components/layout/footer.md"
-        label: "Footer"
-        name: "footer"
+      - file: "src/cms/layouts/site.md"
+        label: "Site Settings"
+        name: "site"
         fields:
-          - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "footer-page",
-            }
           - {
             label: Social Media,
             name: sociallist,
