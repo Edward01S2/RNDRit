@@ -1,4 +1,6 @@
 ---
+templateKey: 'site'
+---
 sociallist:
   - social:
       icon: >

@@ -132,28 +132,5 @@ collections:
                   { label: Button, name: button, widget: string },
                 ],
             }
-      - file: "src/cms/layouts/site.md"
-        label: "Site Settings"
-        name: "site"
-        fields:
-          - {
-            label: Social Media,
-            name: sociallist,
-            widget: list,
-            fields:
-              [
-                {
-                  label: Social,
-                  name: social,
-                  widget: object,
-                  fields:
-                    [
-                      { label: Title, name: title, widget: string },
-                      { label: Link, name: link, widget: string },
-                      { label: Icon, name: icon, widget: text },
-                    ],
-                },
-              ],
-            }
          
  
