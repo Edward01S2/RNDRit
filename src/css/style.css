@@ -62,7 +62,7 @@
   */
 
 html { 
-  font-family: 'Open Sans', sans-serif
+  @apply font-sans;
 }
 
 body {
@@ -88,4 +88,13 @@ a {
 
 .footer-head {
   @apply pb-4 uppercase font-open tracking-wide;
+}
+
+@responsive {
+  .order-0 { order: 0; }
+  .order-1 { order: 1; }
+  .order-2 { order: 2; }
+  .order-3 { order: 3; }
+  .order-4 { order: 4; }
+  .order-5 { order: 5; }
 }

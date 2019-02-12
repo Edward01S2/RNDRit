@@ -20,11 +20,11 @@ const Navbar = class extends React.Component {
     const menuBtn = this.state.btnClick;
     return (
       <nav
-        className="navbar flex items-center justify-between flex-wrap"
         role="navigation"
         aria-label="main-navigation"
       >
-        <div className="flex items-center flex-no-shrink text-black pt-2 pl-4">
+      <div className="px-4 flex items-center justify-between flex-wrap md:py-4 md:px-8">
+        <div className="flex items-center flex-no-shrink text-black pt-2">
           <div className="text-blue pb-2">
             <Logo classes="text-black" />
           </div>
@@ -45,32 +45,33 @@ const Navbar = class extends React.Component {
         <div
           id="navMenu"
           className={
-            "w-full flex-grow md:flex md:items-center md:w-auto " +
+            "w-full flex-grow md:flex md:flex-initial md:items-center md:w-auto " +
             (menuBtn ? "block" : "hidden")
           }
         >
-          <div className="text-lg md:flex-grow text-center bg-grey-lightest font-open py-8 sm:bg-white">
+          <div className="text-lg flex flex-col text-center md:flex-row md:text-left">
             <Link
               to="/about"
-              className="nav-item block text-grey-darker sm:inline-block sm:mt-0 sm:mr-4 no-underline"
+              className="nav-item text-grey-darker mr-4 no-underline md:mr-8"
             >
               services
             </Link>
             <Link
               to="/blog"
-              className="nav-item block mt-8 text-grey-darker sm:inline-block sm:mt-0 sm:mr-4 no-underline"
+              className="nav-item block text-grey-darker mr-4 no-underline md:mr-8"
             >
               work
             </Link>
             <Link
               to="/contact"
-              className="nav-item block mt-8 text-grey-darker sm:inline-block sm:mt-0 no-underline"
+              className="nav-item block text-grey-darker no-underline"
             >
               let's talk
             </Link>
 
-            <Social classes="flex items-center justify-center mt-8" />
+            <Social classes="flex items-center justify-center md:hidden" />
           </div>
+        </div>
         </div>
       </nav>
     );

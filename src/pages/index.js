@@ -26,82 +26,85 @@ export default class IndexPage extends React.Component {
     return (
       <Layout>
         <div className="container mx-auto">
-          <section id="hero" className="py-32 px-4">
-            <div className="font-robot">
-              <h1 className="font-black text-5xl">{hero.heading}</h1>
+          <section id="hero" className="py-40 px-4">
+            <div className="font-robot md:text-center md:w-3/5 md:m-auto">
+              <h1 className="font-bold text-5xl">{hero.heading}</h1>
               <p className="pt-4 text-xl leading-normal">{hero.description}</p>
             </div>
           </section>
 
           <section id="latest-work" className="px-4">
-            <div>
-              <div>
+            <div className="flex flex-col bg-blue-darkest md:flex-row">
+              <div className="md:w-1/2 md:order-1">
                 <Img fluid={work.image.childImageSharp.fluid} />
               </div>
-              <div className="bg-blue-darker">
-                <div className="flex justify-between items-center text-grey-light font-semibold py-4 px-4">
-                  <div>
-                    <p className="uppercase text-sm tracking-wide">
-                      Latest Work
-                    </p>
+              <div className="md:w-1/2 md:order-0">
+                <div className="bg-blue-darker">
+                  <div className="flex justify-between items-center text-grey-light font-semibold py-4 px-4">
+                    <div>
+                      <p className="uppercase text-xs tracking-wide">
+                        Latest Work
+                      </p>
+                    </div>
+                    <div>
+                      <Link
+                        to="/work"
+                        className="text-grey-light tracking-wide text-xs no-underline flex items-center"
+                      >
+                        <span>See All</span>
+                        <span className="pl-3">
+                          <svg
+                            className="fill-current h-3 w-3"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                          >
+                            <path d="M16.172 9l-6.071-6.071 1.414-1.414L20 10l-.707.707-7.778 7.778-1.414-1.414L16.172 11H0V9z" />
+                          </svg>
+                        </span>
+                      </Link>
+                    </div>
                   </div>
-                  <div>
-                    <Link
-                      to="/work"
-                      className="text-grey-light tracking-wide text-sm no-underline flex items-center"
-                    >
-                      <span>See All</span>
-                      <span className="pl-3">
-                        <svg
-                          className="fill-current h-3 w-3"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                        >
-                          <path d="M16.172 9l-6.071-6.071 1.414-1.414L20 10l-.707.707-7.778 7.778-1.414-1.414L16.172 11H0V9z" />
-                        </svg>
-                      </span>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-blue-darkest font-robot px-4 py-12">
-                <h3 className="text-3xl font-bold pb-4 text-blue-lightest">
-                  {work.title}
-                </h3>
-                <p className="leading-normal pb-4 text-blue-lighter">
-                  {work.description}
-                </p>
-                <div className="flex pb-6 text-grey-dark text-sm">
-                  <svg
-                    className="fill-current h-4 w-4"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                  >
-                    <path d="M10 1l10 6-10 6L0 7l10-6zm6.67 10L20 13l-10 6-10-6 3.33-2L10 15l6.67-4z" />
-                  </svg>
-                  {work.tags.map(tag => (
-                    <p key={uuid.v4()} className="pl-4">
-                      {tag}
-                    </p>
-                  ))}
                 </div>
 
-                <div>
-                  <a
-                    className="bg-blue-dark hover:bg-blue-dark text-white py-2 px-6 rounded no-underline inline-flex items-center"
-                    href={work.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                <div className="px-4 py-12">
+                  <h3 className="text-3xl font-normal tracking-wide pb-4 text-blue-lightest">
+                    {work.title}
+                  </h3>
+                  <p className="leading-normal text-sm text-blue-lighter">
+                    {work.description}
+                  </p>
+                  <div className="flex py-6 text-grey-dark text-xs">
                     <svg
                       className="fill-current h-4 w-4"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
                     >
-                      <path d="M9.26 13a2 2 0 0 1 .01-2.01A3 3 0 0 0 9 5H5a3 3 0 0 0 0 6h.08a6.06 6.06 0 0 0 0 2H5A5 5 0 0 1 5 3h4a5 5 0 0 1 .26 10zm1.48-6a2 2 0 0 1-.01 2.01A3 3 0 0 0 11 15h4a3 3 0 0 0 0-6h-.08a6.06 6.06 0 0 0 0-2H15a5 5 0 0 1 0 10h-4a5 5 0 0 1-.26-10z" />
+                      <path d="M10 1l10 6-10 6L0 7l10-6zm6.67 10L20 13l-10 6-10-6 3.33-2L10 15l6.67-4z" />
                     </svg>
-                    <span className="pl-3">See it live</span>
-                  </a>
+                    {work.tags.map(tag => (
+                      <p key={uuid.v4()} className="pl-4">
+                        {tag}
+                      </p>
+                    ))}
+                  </div>
+
+                  <div>
+                    <a
+                      className="bg-blue-dark hover:bg-blue-dark text-white py-2 pl-6 pr-8 mb-4 rounded no-underline inline-flex items-center"
+                      href={work.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <svg
+                        className="fill-current h-4 w-4"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M9.26 13a2 2 0 0 1 .01-2.01A3 3 0 0 0 9 5H5a3 3 0 0 0 0 6h.08a6.06 6.06 0 0 0 0 2H5A5 5 0 0 1 5 3h4a5 5 0 0 1 .26 10zm1.48-6a2 2 0 0 1-.01 2.01A3 3 0 0 0 11 15h4a3 3 0 0 0 0-6h-.08a6.06 6.06 0 0 0 0-2H15a5 5 0 0 1 0 10h-4a5 5 0 0 1-.26-10z" />
+                      </svg>
+                      <span className="pl-3">See it live</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -113,9 +116,9 @@ export default class IndexPage extends React.Component {
             id="featured"
             className="bg-blue-dark text-white text-shadow text-center"
           >
-            <div className="px-4 py-16">
+            <div className="px-4 py-16 flex flex-col md:flex-row">
               {feat.map(({ card }) => (
-                <div key={uuid.v4()} className="p-4 mb-4">
+                <div key={uuid.v4()} className="p-4 mb-4 md:w-1/3">
                   <h4 className="text-xl pb-4 inline-flex items-center content-center">
                     <svg
                       className="h-6 fill-current"
@@ -123,7 +126,7 @@ export default class IndexPage extends React.Component {
                       viewBox="0 0 20 20"
                       dangerouslySetInnerHTML={createMarkup(card.icon)}
                     />
-                    <span className="pl-3">{card.title}</span>
+                    <span className="pl-3 tracking-wide font-sans font-normal">{card.title}</span>
                   </h4>
                   <ul className="text-blue-lighter leading-loose list-reset">
                     {card.list.map(item => (
@@ -150,18 +153,18 @@ export default class IndexPage extends React.Component {
                 </h3>
               </div>
 
-              <div>
+              <div className="md:grid md:grid-columns-3 md:grid-gap-4">
                 {posts.map(({ node: post }) => (
                   <Link
                     className="no-underline"
                     to={post.fields.slug}
                     key={post.id}
                   >
-                    <div className="no-underline bg-white rounded-sm shadow shadow-md text-black p-4 mb-8 border-l-4 border-blue">
+                    <div className="no-underline bg-white rounded-sm shadow shadow-md text-black p-4 mb-8 border-l-4 border-blue md:border-l-0 md:border-b-4">
                       <p className="text-xs pb-4 text-blue-darker uppercase font-open font-semibold">
                         {post.frontmatter.date}
                       </p>
-                      <p className="pb-4 font-robot font-bold text-xl border-b text-blue-darkest">
+                      <p className="pb-4 font-robot font-bold text-xl border-b text-blue-darkest md:text-lg">
                         {post.frontmatter.title}
                       </p>
                       <p className="pt-3 no-underline text-xs text-grey-darker">
@@ -269,7 +272,7 @@ export const pageQuery = graphql`
             link
             image {
               childImageSharp {
-                fluid(maxWidth: 500, maxHeight: 350, quality: 93) {
+                fluid(maxWidth: 500, quality: 93) {
                   ...GatsbyImageSharpFluid
                 }
               }
