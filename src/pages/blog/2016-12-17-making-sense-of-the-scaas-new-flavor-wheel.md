@@ -2,6 +2,7 @@
 templateKey: blog-post
 title: My Experience with React Development and the entire ecosystem
 date: 2017-03-15T15:04:10.000Z
+image: /img/luca-bravo-217276-unsplash.jpg
 description: >-
   The Coffee Taster’s Flavor Wheel, the official resource used by coffee
   tasters, has been revised for the first time this year.
