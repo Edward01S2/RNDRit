@@ -66,13 +66,13 @@ export default class IndexPage extends React.Component {
                 </div>
 
                 <div className="px-4 py-12">
-                  <h3 className="text-3xl font-normal tracking-wide pb-4 text-blue-lightest">
+                  <h3 className="text-3xl font-semi-bold font-robot tracking-wide pb-4 text-blue-lightest">
                     {work.title}
                   </h3>
-                  <p className="leading-normal text-sm text-grey">
+                  <p className="leading-normal text-md text-grey">
                     {work.description}
                   </p>
-                  <div className="flex py-6 text-grey-dark text-xs">
+                  <div className="flex py-6 text-grey-dark text-sm">
                     <svg
                       className="fill-current h-4 w-4"
                       xmlns="http://www.w3.org/2000/svg"
@@ -118,7 +118,7 @@ export default class IndexPage extends React.Component {
             <div className="px-4 pt-20 pb-16 flex flex-col md:flex-row">
               {feat.map(({ card }) => (
                 <div key={uuid.v4()} className="p-4 mb-4 md:w-1/3">
-                  <h4 className="text-xl pb-4 inline-flex items-center content-center">
+                  <h4 className="text-2xl pb-4 inline-flex items-center content-center">
                     <svg
                       className="h-6 fill-current"
                       xmlns="http://www.w3.org/2000/svg"
@@ -129,7 +129,7 @@ export default class IndexPage extends React.Component {
                       {card.title}
                     </span>
                   </h4>
-                  <ul className="text-blue-lighter leading-loose list-reset">
+                  <ul className="text-blue-lighter leading-loose list-reset text-lg">
                     {card.list.map(item => (
                       <li key={uuid.v4()}>{item}</li>
                     ))}
@@ -144,8 +144,8 @@ export default class IndexPage extends React.Component {
           <section className="bg-blue-darker">
             <div className="py-20 px-4">
               <div className="text-center text-white">
-                <p className="uppercase text-xs tracking-wide pb-4">Articles</p>
-                <h3 className="text-3xl font-semibold pb-8 tracking-wide">
+                <p className="uppercase text-sm tracking-wide pb-4">Articles</p>
+                <h3 className="text-3xl font-semibold font-robot pb-8 tracking-wide">
                   Lastest Posts
                 </h3>
               </div>
@@ -192,7 +192,7 @@ export default class IndexPage extends React.Component {
 
           <section id="contact" className="py-20 px-4">
             <div className="text-center">
-              <p className="font-open uppercase text-xs tracking-wide pb-4 text-grey-dark">
+              <p className="font-open uppercase text-sm tracking-wide pb-4 text-grey-dark">
                 {cont.sub}
               </p>
               <h3

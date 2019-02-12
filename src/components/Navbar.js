@@ -23,9 +23,9 @@ const Navbar = class extends React.Component {
         role="navigation"
         aria-label="main-navigation"
       >
-      <div className="px-4 flex items-center justify-between flex-wrap md:py-4 md:px-8">
+      <div className="flex items-center justify-between flex-wrap md:py-4 md:px-8">
         <div className="flex items-center flex-no-shrink text-black pt-2">
-          <div className="text-blue pb-2">
+          <div className="text-blue pb-2 pl-4">
             <Logo classes="text-black" layout="items-center" />
           </div>
         </div>
@@ -45,31 +45,31 @@ const Navbar = class extends React.Component {
         <div
           id="navMenu"
           className={
-            "w-full flex-grow md:flex md:flex-initial md:items-center md:w-auto " +
+            "w-full flex-grow bg-grey-lightest py-6 md:flex md:flex-initial md:items-center md:w-auto " +
             (menuBtn ? "block" : "hidden")
           }
         >
           <div className="text-lg flex flex-col text-center md:flex-row md:text-left">
             <Link
               to="/about"
-              className="nav-item text-grey-darker mr-4 no-underline md:mr-8"
+              className="nav-item text-grey-darker no-underline mt-6 md:mr-8"
             >
               services
             </Link>
             <Link
               to="/blog"
-              className="nav-item block text-grey-darker mr-4 no-underline md:mr-8"
+              className="nav-item block text-grey-darker no-underline mt-6 md:mr-8"
             >
               work
             </Link>
             <Link
               to="/contact"
-              className="nav-item block text-grey-darker no-underline"
+              className="nav-item block text-grey-darker mt-6 no-underline"
             >
               let's talk
             </Link>
 
-            <Social classes="flex items-center justify-center md:hidden" />
+            <Social classes="flex items-center justify-center my-6 md:hidden" />
           </div>
         </div>
         </div>
