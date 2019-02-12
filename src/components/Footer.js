@@ -7,14 +7,24 @@ const Footer = class extends React.Component {
   render() {
     return (
       <footer>
-        <div className="bg-blue-darker text-white">
-          <div className="px-8 pt-8 grid grid-columns-2">
-            <Logo classes="text-white" />
-            <Social classes="h-12 pt-2 flex items-center" />
-          </div>
+        <div className="bg-blue-darkest text-white">
+          <div className="px-8 pt-8 grid grid-columns-2 md:grid-columns-4">
+            <div className="md:order-0 md:flex md:flex-col">
+              <Logo classes="text-white" layout="items-center"/>
+              <div className="hidden md:block md:pt-3">
+                <ul className="list-reset text-sm">
+                  <li className="footer-links">@2019 rndr.tech</li>
+                  <li className="footer-links">Privacy & Policy</li>
+                </ul>
+              </div>
+            </div>
 
-          <div className="px-8 pt-6 grid grid-columns-2">
-            <div>
+            <div className="pt-2 md:order-3 md:pt-4">
+              <h4 className="footer-head hidden md:block">Social</h4>
+              <Social classes="h-8 flex items-center" />
+            </div>
+            
+            <div className="pt-4 md:order-1">
               <h4 className="footer-head">Company</h4>
               <ul className="list-reset">
                 <li>
@@ -35,7 +45,7 @@ const Footer = class extends React.Component {
               </ul>
             </div>
 
-            <div>
+            <div className="pt-4 md:order-2">
               <h4 className="footer-head">RESOURCES</h4>
               <ul className="list-reset">
                 <li>
@@ -52,8 +62,8 @@ const Footer = class extends React.Component {
             </div>
           </div>
 
-          <div className="pl-8 py-6">
-            <p className="text-xs text-grey-dark font-robot tracking-normal flex items-center">
+          <div className="p-8 py-8 md:text-center">
+            <p className="text-xs text-grey-dark font-robot tracking-normal">
               Made with
               <span>
                 <svg
@@ -64,7 +74,7 @@ const Footer = class extends React.Component {
                   <path d="M10 3.22l-.61-.6a5.5 5.5 0 0 0-7.78 7.77L10 18.78l8.39-8.4a5.5 5.5 0 0 0-7.78-7.77l-.61.61z" />
                 </svg>
               </span>
-              in Dallas, TX
+              currently in Dallas, TX
             </p>
           </div>
         </div>

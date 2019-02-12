@@ -26,7 +26,7 @@ const Navbar = class extends React.Component {
       <div className="px-4 flex items-center justify-between flex-wrap md:py-4 md:px-8">
         <div className="flex items-center flex-no-shrink text-black pt-2">
           <div className="text-blue pb-2">
-            <Logo classes="text-black" />
+            <Logo classes="text-black" layout="items-center" />
           </div>
         </div>
         <div className="block pin-t pin-r absolute md:hidden">

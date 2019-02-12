@@ -971,7 +971,7 @@ module.exports = {
       // padding: '1rem',
     }),
     require('./src/plugins/grid')({
-      grids: [2, 3, 5, 6, 8, 10, 12],
+      grids: [2, 3, 4, 5, 6, 8, 10, 12],
       gaps: {
         0: '0',
         4: '1rem',

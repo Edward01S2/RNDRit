@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Tech = ({ data, width }) => (
-  <section className="py-24 px-4 md:px-8 md:flex">
+  <section className="py-20 px-4 md:px-8 md:flex">
     <div className="md:w-1/2">
       <p className="font-open uppercase text-xs tracking-wide pb-4">
         {data.sub}
