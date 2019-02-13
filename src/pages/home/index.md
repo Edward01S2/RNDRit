@@ -7,10 +7,8 @@ hero:
   heading: Rendering digital services
 dev:
   description: >-
-    A structured development process is crucial for creating products that
-    people love. Rndr.tech follows a development process that includes test
-    driven development, continuous integration and peer review in order to
-    ensure products meet the highest standards.
+    We approach our work strategy-first, seeking to understand your goals and
+    then creating custom solutions that best serve those needs.
   head: Web<br>Development
   sub: Technology
 feature:
