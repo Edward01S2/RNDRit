@@ -10,7 +10,7 @@ dev:
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
     quis nostrud exercitation.
-  head: Web Development
+  head: Web<br>Development
   sub: Technology
 feature:
   - card:
@@ -50,7 +50,7 @@ it:
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
     quis nostrud exercitation.
-  head: Managed IT & Support Solutions
+  head: Managed IT &<br>Support Solutions
   sub: Technology
 contact:
   button: Get in touch
