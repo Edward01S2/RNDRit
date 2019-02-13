@@ -7,8 +7,9 @@ hero:
   heading: Rendering digital services
 dev:
   description: >-
-    We approach our work strategy-first, seeking to understand your goals and
-    then creating custom solutions that best serve those needs.
+    We embrace strategy-first, seeking to understand your goals and then
+    creating custom solutions that best serve those needs. A well structured
+    development process is necessary to create products that people love.
   head: Web<br>Development
   sub: Technology
 feature:
