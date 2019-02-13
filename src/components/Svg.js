@@ -3,9 +3,9 @@ import Rndr from "../img/rndr.svg";
 import MenuSvg from "../img/menu.svg";
 import CloseSvg from "../img/close.svg";
 
-const Logo = ({classes, layout}) => (
+const Logo = ({classes, layout, svg}) => (
   <div className={`flex ${layout}`}>
-    <Rndr className="h-8 fill-current text-blue-dark border-none"/>
+    <Rndr className={`h-8 fill-current text-blue-dark border-none ${svg}`}/>
     <h2 className={`text-4xl pl-2 font-bold font-sans tracking-wide ${classes}`}>rndr</h2>
   </div>
 )

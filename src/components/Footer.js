@@ -11,7 +11,7 @@ const Footer = class extends React.Component {
           <div className="container mx-auto">
             <div className="px-8 pt-8 grid grid-columns-2 md:grid-columns-4">
               <div className="md:order-0 md:flex md:flex-col">
-                <Logo classes="text-white" layout="items-center" />
+                <Logo classes="text-white lg:text-5xl" layout="items-center" svg="lg:h-10" />
                 <div className="hidden md:block md:pt-3">
                   <ul className="list-reset text-sm">
                     <li className="footer-links">@2019 rndr.tech</li>

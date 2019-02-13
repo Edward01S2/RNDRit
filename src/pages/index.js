@@ -29,8 +29,8 @@ export default class IndexPage extends React.Component {
         <section id="hero" className="container mx-auto">
           <div className="py-40 px-4 xl:py-56">
             <div className="font-robot md:text-center md:w-3/5 md:m-auto lg:w-1/2">
-              <h1 className="font-bold text-5xl">{hero.heading}</h1>
-              <p className="pt-4 text-xl leading-normal">{hero.description}</p>
+              <h1 className="font-bold text-5xl xl:text-6xl">{hero.heading}</h1>
+              <p className="pt-4 text-xl leading-normal xl:text-2xl">{hero.description}</p>
             </div>
           </div>
         </section>
@@ -46,19 +46,19 @@ export default class IndexPage extends React.Component {
                 <div className="bg-blue-darker">
                   <div className="flex justify-between items-center text-grey-light font-semibold py-4 px-4 md:py-6 lg:px-8 py-6">
                     <div>
-                      <p className="uppercase text-xs tracking-wide">
+                      <p className="uppercase text-xs tracking-wide xl:text-base">
                         Latest Work
                       </p>
                     </div>
                     <div>
                       <Link
                         to="/work"
-                        className="text-grey-light tracking-wide text-xs no-underline flex items-center"
+                        className="text-grey-light tracking-wide text-xs no-underline flex items-center xl:text-base"
                       >
                         <span>See All</span>
                         <span className="pl-3">
                           <svg
-                            className="fill-current h-3 w-3"
+                            className="fill-current h-3"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 20 20"
                           >
@@ -75,10 +75,10 @@ export default class IndexPage extends React.Component {
                     <h3 className="text-3xl font-semi-bold font-robot tracking-wide pb-4 text-blue-lightest lg:pb-6 lg:text-4xl">
                       {work.title}
                     </h3>
-                    <p className="leading-normal text-md text-grey">
+                    <p className="leading-normal text-grey xl:text-lg">
                       {work.description}
                     </p>
-                    <div className="flex pt-4 pb-5 text-grey-dark text-sm lg:py-6">
+                    <div className="flex items-center pt-4 pb-5 text-grey-dark text-sm lg:py-6 xl:text-base">
                       <svg
                         className="fill-current h-4 w-4"
                         xmlns="http://www.w3.org/2000/svg"
@@ -95,13 +95,13 @@ export default class IndexPage extends React.Component {
 
                     <div>
                       <a
-                        className="bg-blue-dark hover:bg-blue-dark text-white py-2 pl-6 pr-8 mb-4 rounded no-underline inline-flex items-center"
+                        className="bg-blue-dark hover:bg-blue-dark text-white py-2 pl-6 pr-8 mb-4 rounded no-underline inline-flex items-center xl:text-xl xl:py-3"
                         href={work.link}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
                         <svg
-                          className="fill-current h-4 w-4"
+                          className="fill-current h-4 xl:h-5"
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 20 20"
                         >
@@ -153,13 +153,14 @@ export default class IndexPage extends React.Component {
         
         {/* MANAGED IT & SUPPORT SERVICES */}
         <Tech data={it} width={36} />
-
+        
+        {/* LATEST POSTS */}
         <section className="bg-blue-darker">
           <div className="container mx-auto">
             <div className="py-20 px-4 lg:px-8 lg:py-24">
               <div className="text-center text-white">
                 <p className="uppercase text-sm tracking-wide pb-4">Articles</p>
-                <h3 className="text-3xl font-semibold font-robot pb-8 tracking-wide">
+                <h3 className="text-3xl font-semibold font-robot pb-8 tracking-wide lg:text-4xl">
                   Lastest Posts
                 </h3>
               </div>
@@ -178,7 +179,7 @@ export default class IndexPage extends React.Component {
                         />
                       </div>
                       <div className="no-underline bg-white rounded-sm shadow shadow-md text-black p-4 mb-4 border-l-4 border-blue md:border-none">
-                        <p className="text-xs pb-4 text-blue-darker uppercase font-open font-semibold lg:text-sm">
+                        <p className="text-xs pb-4 text-blue-darker uppercase font-open font-semibold">
                           {post.frontmatter.date}
                         </p>
                         <p className="pb-4 font-bold text-lg border-b text-blue-darkest md:text-xl">
@@ -207,13 +208,13 @@ export default class IndexPage extends React.Component {
 
         {/* CONTACT SECTION */}
         <section id="contact" className="container mx-auto">
-          <div className="py-20 px-4 md:py-32">
+          <div className="py-24 px-4 md:py-32 lg:py-40">
             <div className="text-center">
               <p className="font-open uppercase text-sm tracking-wide pb-4 text-grey-dark">
                 {cont.sub}
               </p>
               <h3
-                className={`font-robot text-3xl font-bold pb-4 tracking normal lg:text-4xl`}
+                className={`font-robot text-3xl font-bold pb-4 tracking normal lg:text-4xl xl:text-5xl`}
               >
                 {cont.head}
               </h3>
