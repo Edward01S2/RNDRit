@@ -47,9 +47,9 @@ feature:
       title: Technology
 it:
   description: >-
-    Rndr.tech provides support based on your business needs. We monitor and
-    manage a wide range of applications, business functions, and equipment on
-    your behalf and keep your systems safe to keep your business running.
+    We provide support based on your business needs. We monitor and manage a
+    wide range of applications, business functions, and equipment on your behalf
+    and keep your systems safe to keep your business running.
   head: Managed IT &<br>Support Solutions
   sub: Technology
 contact:
