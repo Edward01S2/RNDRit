@@ -2,14 +2,15 @@
 templateKey: home-page
 hero:
   description: >-
-    Rndr.it is a full-service digital agency and managed IT provider working
+    Rndr.tech is a full-service digital agency and managed IT provider working
     with companies of all sizes.
   heading: Rendering digital services
 dev:
   description: >-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation.
+    A structured development process is crucial for creating products that
+    people love. Rndr.tech follows a development process that includes test
+    driven development, continuous integration and peer review in order to
+    ensure products meet the highest standards.
   head: Web<br>Development
   sub: Technology
 feature:
