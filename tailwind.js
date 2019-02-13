@@ -630,6 +630,7 @@ module.exports = {
     '4xl': '90rem',
     '5xl': '100rem',
     'full': '100%',
+    '1000': '1000px',
   },
 
 
@@ -688,6 +689,7 @@ module.exports = {
     '32': '8rem',
     '40': '10rem',
     '48': '12rem',
+    '56': '14rem',
   },
 
 
@@ -976,6 +978,7 @@ module.exports = {
         0: '0',
         4: '1rem',
         8: '2rem',
+        16: '4rem',
       },
       variants: ['responsive'],
     }), 
