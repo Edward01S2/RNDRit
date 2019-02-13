@@ -47,9 +47,9 @@ feature:
       title: Technology
 it:
   description: >-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation.
+    Rndr.tech provides support based on your business needs. We monitor and
+    manage a wide range of applications, business functions, and equipment on
+    your behalf and keep your systems safe to keep your business running.
   head: Managed IT &<br>Support Solutions
   sub: Technology
 contact:
