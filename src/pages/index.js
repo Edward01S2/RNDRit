@@ -53,12 +53,12 @@ export default class IndexPage extends React.Component {
                     <div>
                       <Link
                         to="/work"
-                        className="text-grey-light tracking-wide text-xs no-underline flex items-center xl:text-base"
+                        className="text-grey-light tracking-wide text-xs no-underline flex items-center hover:text-white xl:text-base"
                       >
                         <span>See All</span>
                         <span className="pl-3">
                           <svg
-                            className="fill-current h-3"
+                            className="fill-current h-3 w-3"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 20 20"
                           >
@@ -95,13 +95,13 @@ export default class IndexPage extends React.Component {
 
                     <div>
                       <a
-                        className="bg-blue-dark hover:bg-blue-dark text-white py-2 pl-6 pr-8 mb-4 rounded no-underline inline-flex items-center xl:text-xl xl:py-3"
+                        className="bg-blue hover:bg-blue-dark text-white py-2 pl-6 pr-8 mb-4 rounded no-underline inline-flex items-center xl:text-xl xl:py-3"
                         href={work.link}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
                         <svg
-                          className="fill-current h-4 xl:h-5"
+                          className="fill-current h-4 w-4 xl:h-5 xl:w-5"
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 20 20"
                         >
@@ -123,7 +123,7 @@ export default class IndexPage extends React.Component {
         {/* WEB DEVELOPMENT FEAT */}
         <section
           id="featured"
-          className="bg-blue-dark text-white text-shadow text-center"
+          className="bg-blue-dark text-grey-lightest text-shadow text-center"
         >
           <div className="container mx-auto">
             <div className="px-4 pt-20 pb-16 flex flex-col md:flex-row">
@@ -131,7 +131,7 @@ export default class IndexPage extends React.Component {
                 <div key={uuid.v4()} className="p-4 mb-4 md:w-1/3">
                   <h4 className="text-2xl pb-4 inline-flex items-center content-center">
                     <svg
-                      className="h-6 fill-current"
+                      className="h-6 w-6 fill-current"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
                       dangerouslySetInnerHTML={createMarkup(card.icon)}
@@ -159,8 +159,8 @@ export default class IndexPage extends React.Component {
           <div className="container mx-auto">
             <div className="py-20 px-4 lg:px-8 lg:py-24">
               <div className="text-center text-white">
-                <p className="uppercase text-sm tracking-wide pb-4">Articles</p>
-                <h3 className="text-3xl font-semibold font-robot pb-8 tracking-wide lg:text-4xl">
+                <p className="uppercase text-sm tracking-wide pb-4 text-shadow">Articles</p>
+                <h3 className="text-3xl font-semibold font-robot pb-8 tracking-wide text-shadow lg:text-4xl">
                   Lastest Posts
                 </h3>
               </div>
@@ -172,7 +172,7 @@ export default class IndexPage extends React.Component {
                     to={post.fields.slug}
                     key={post.id}
                   >
-                    <div>
+                    <div className="post-card">
                       <div className="hidden md:block">
                         <Img
                           fluid={post.frontmatter.image.childImageSharp.fluid}
@@ -189,7 +189,7 @@ export default class IndexPage extends React.Component {
                           Read More{" "}
                           <span>
                             <svg
-                              className="h-2 pl-2 fill-current"
+                              className="h-2 w-2 pl-2 fill-current"
                               xmlns="http://www.w3.org/2000/svg"
                               viewBox="0 0 20 20"
                             >
@@ -210,7 +210,7 @@ export default class IndexPage extends React.Component {
         <section id="contact" className="container mx-auto">
           <div className="py-24 px-4 md:py-32 lg:py-40">
             <div className="text-center">
-              <p className="font-open uppercase text-sm tracking-wide pb-4 text-grey-dark">
+              <p className="font-open uppercase text-sm tracking-wide pb-4 text-grey-darker">
                 {cont.sub}
               </p>
               <h3
@@ -218,12 +218,12 @@ export default class IndexPage extends React.Component {
               >
                 {cont.head}
               </h3>
-              <p className="font-semibold opacity-50 leading-normal pb-8 md:w-3/5 md:m-auto lg:text-lg">
+              <p className="font-semibold opacity-75 leading-normal pb-8 md:w-3/5 md:m-auto lg:text-lg">
                 {cont.description}
               </p>
               <Link
                 to="/about"
-                className="bg-blue hover:bg-blue-dark text-white py-3 px-6 rounded no-underline inline-flex items-center text-lg"
+                className="bg-blue hover:bg-blue-dark text-white py-3 px-6 rounded no-underline inline-flex items-center text-lg xl:text-xl"
               >
                 {cont.button}
               </Link>

@@ -61,8 +61,9 @@
   * @import "utilities/skew-transforms";
   */
 
+
 html { 
-  @apply font-sans;
+  @apply font-sans bg-grey-lightest text-black;
 }
 
 body {
@@ -74,6 +75,8 @@ body {
 }
 
 a {
+  transition: all 0.2s ease; 
+  transition-property: transform, opacity, color, border-color, background-color;
   @apply no-underline;
 }
 
@@ -81,13 +84,24 @@ a {
   text-shadow: 0 1px 3px rgba(0,0,0,0.30);
 }
 
+.nav-item {
+  @apply text-grey-darker px-4 py-3 rounded no-underline;
+}
 
 .footer-links {
   @apply no-underline text-grey-dark leading-normal font-open font-semibold;
 }
 
 .footer-head {
-  @apply pb-4 uppercase font-open tracking-wide;
+  @apply pb-4 uppercase font-open tracking-wide text-shadow;
+}
+
+.post-card {
+  transition: all .2s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-1px);
 }
 
 @responsive {

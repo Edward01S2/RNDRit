@@ -24,7 +24,7 @@ const Navbar = class extends React.Component {
           <div className="flex items-center justify-between flex-wrap md:py-4 md:px-4">
             <div className="flex items-center flex-no-shrink text-black pt-2">
               <div className="text-blue pb-2 pl-4 md:pl-0">
-                <Logo classes="text-black lg:text-5xl" layout="items-center" svg="lg:h-10" />
+                <Logo classes="text-black lg:text-5xl" layout="items-center" svg="lg:h-10 lg:w-10" />
               </div>
             </div>
             <div className="block pin-t pin-r absolute md:hidden">
@@ -49,20 +49,20 @@ const Navbar = class extends React.Component {
             >
               <div className="text-lg flex flex-col text-center md:flex-row md:text-left">
                 <Link
-                  to="/about"
-                  className="nav-item text-grey-darker no-underline mt-6 md:mr-8 md:mt-0 lg:mr-12"
+                  to="/service"
+                  className="nav-item hover:bg-blue-dark hover:text-white mt-6 md:mr-8 md:mt-0 lg:mr-8"
                 >
                   services
                 </Link>
                 <Link
                   to="/blog"
-                  className="nav-item block text-grey-darker no-underline mt-6 md:mr-8 md:mt-0 lg:mr-12"
+                  className="block nav-item hover:bg-blue-dark hover:text-white mt-6 md:mr-8 md:mt-0 lg:mr-8"
                 >
                   work
                 </Link>
                 <Link
                   to="/contact"
-                  className="nav-item block text-grey-darker mt-6 no-underline md:mt-0"
+                  className="block nav-item hover:bg-blue-dark hover:text-white mt-6 md:mt-0"
                 >
                   let's talk
                 </Link>

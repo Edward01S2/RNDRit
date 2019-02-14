@@ -11,35 +11,35 @@ const Footer = class extends React.Component {
           <div className="container mx-auto">
             <div className="px-8 pt-8 grid grid-columns-2 md:grid-columns-4">
               <div className="md:order-0 md:flex md:flex-col">
-                <Logo classes="text-white lg:text-5xl" layout="items-center" svg="lg:h-10" />
+                <Logo classes="text-white text-shadow lg:text-5xl" layout="items-center" svg="lg:h-10 lg:w-10" />
                 <div className="hidden md:block md:pt-3">
                   <ul className="list-reset text-sm">
-                    <li className="footer-links">@2019 rndr.tech</li>
-                    <li className="footer-links">Privacy & Policy</li>
+                    <li className="footer-links hover:text-white pb-2">@2019 rndr.tech</li>
+                    <li className="footer-links hover:text-white">Privacy & Policy</li>
                   </ul>
                 </div>
               </div>
 
               <div className="pt-2 md:order-3 md:pt-4">
                 <h4 className="footer-head hidden md:block">Social</h4>
-                <Social classes="h-8 flex items-center" />
+                <Social classes="h-8 flex items-center" link="hover:text-white"/>
               </div>
 
               <div className="pt-4 md:order-1">
                 <h4 className="footer-head">Company</h4>
                 <ul className="list-reset">
-                  <li>
-                    <Link to="work" className="footer-links">
+                  <li className="pb-2">
+                    <Link to="work" className="footer-links hover:text-white">
                       Work
                     </Link>
                   </li>
-                  <li>
-                    <Link to="services" className="footer-links">
+                  <li className="pb-2">
+                    <Link to="services" className="footer-links hover:text-white">
                       Services
                     </Link>
                   </li>
                   <li>
-                    <Link to="articles" className="footer-links">
+                    <Link to="articles" className="footer-links hover:text-white">
                       Articles
                     </Link>
                   </li>
@@ -49,13 +49,13 @@ const Footer = class extends React.Component {
               <div className="pt-4 md:order-2">
                 <h4 className="footer-head">RESOURCES</h4>
                 <ul className="list-reset">
-                  <li>
-                    <Link to="contact" className="footer-links">
+                  <li className="pb-2">
+                    <Link to="contact" className="footer-links hover:text-white">
                       Contact
                     </Link>
                   </li>
                   <li>
-                    <a href="email" className="footer-links">
+                    <a href="email" className="footer-links hover:text-white">
                       Email
                     </a>
                   </li>
