@@ -49,14 +49,14 @@ it:
   description: >-
     We provide support based on your business needs. We monitor and manage a
     wide range of applications, business functions, and equipment on your behalf
-    and keep your systems safe to keep your business running.
+    and keep your systems safe to ensure business uptime.
   head: Managed IT &<br>Support Solutions
   sub: Technology
 contact:
   button: Get in touch
   description: >-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt.
+    Have a new project? Need help with existing systems? We would love to hear
+    from you!
   head: Let's work together
   sub: Contact Us
 ---
