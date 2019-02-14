@@ -2,8 +2,8 @@
 templateKey: home-page
 hero:
   description: >-
-    Rndr.tech is a full-service digital agency and managed IT provider working
-    with companies of all sizes.
+    Rndr is a full-service digital agency and managed IT provider working with
+    companies of all sizes.
   heading: Rendering digital services
 dev:
   description: >-
