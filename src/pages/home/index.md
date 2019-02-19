@@ -55,8 +55,8 @@ it:
 contact:
   button: Get in touch
   description: >-
-    Have a new project? Need help with existing systems? We would love to hear
-    from you!
+    Let us figure out your problem or project, make a plan, and implement a
+    solution.
   head: Let's work together
   sub: Contact Us
 ---
