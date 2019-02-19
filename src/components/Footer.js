@@ -9,7 +9,7 @@ const Footer = class extends React.Component {
       <footer>
         <div className="bg-blue-darkest text-white">
           <div className="container mx-auto">
-            <div className="px-8 pt-8 grid grid-columns-2 md:grid-columns-4">
+            <div className="px-8 pt-8 grid grid-columns-2 md:grid-columns-4 lg:px-4 xl:px-0">
               <div className="md:order-0 md:flex md:flex-col">
                 <Logo classes="text-white text-shadow lg:text-5xl" layout="items-center" svg="lg:h-10 lg:w-10" />
                 <div className="hidden md:block md:pt-3">

@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'RNDR.it',
-    description: 'Rndr.it is a full-service digital agency and managed IT provider working with companies of all sizes.',
+    title: 'rndr.tech',
+    description: 'Rndr is a full-service digital agency and managed IT provider working with companies of all sizes.',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

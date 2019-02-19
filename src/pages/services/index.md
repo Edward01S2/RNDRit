@@ -1,6 +1,6 @@
 ---
 templateKey: 'service-page'
-path: /service
+path: /services
 title: About our values
 ---
 ### Shade-grown coffee

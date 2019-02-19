@@ -85,7 +85,7 @@ a {
 }
 
 .nav-item {
-  @apply text-grey-darker px-4 py-3 rounded no-underline;
+  @apply px-4 py-3 rounded no-underline;
 }
 
 .footer-links {
@@ -96,12 +96,32 @@ a {
   @apply pb-4 uppercase font-open tracking-wide text-shadow;
 }
 
-.post-card {
+.trans-y {
   transition: all .2s ease;
 }
 
-.post-card:hover {
+.scale-up {
+  transition: all .2s ease;
+}
+
+.trans-y:hover {
   transform: translateY(-1px);
+}
+
+.scale-up:hover {
+  transform: scale(1.01);
+}
+
+.hero-path {
+  fill: #fff;
+  stroke:#000;
+  stroke-width: 1;
+}
+.fadein {
+  fill: #000;
+  -webkit-transition: fill 1s;
+  -moz-transition: fill 1s;
+  transition: fill 1s;
 }
 
 @responsive {

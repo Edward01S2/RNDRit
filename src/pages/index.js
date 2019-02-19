@@ -3,6 +3,9 @@ import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Tech from "../components/Tech";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import Hero from "../components/Hero";
 import Img from "gatsby-image";
 import uuid from "uuid";
 
@@ -24,16 +27,10 @@ export default class IndexPage extends React.Component {
 
     return (
       <Layout>
+        <Navbar logo="text-black lg:text-5xl" navItems="text-grey-darker" menuBg="bg-grey-lighter"/>
 
         {/* HERO SECTION */}
-        <section id="hero" className="container mx-auto">
-          <div className="py-40 px-4 xl:py-56">
-            <div className="font-robot md:text-center md:w-3/5 md:m-auto lg:w-1/2">
-              <h1 className="font-bold text-5xl xl:text-6xl">{hero.heading}</h1>
-              <p className="pt-4 text-xl leading-normal xl:text-2xl">{hero.description}</p>
-            </div>
-          </div>
-        </section>
+        <Hero heading={hero.heading} description={hero.description}/>
 
         {/* LATEST WORK SECTION */}
         <section id="latest-work" className="container mx-auto">
@@ -95,7 +92,7 @@ export default class IndexPage extends React.Component {
 
                     <div>
                       <a
-                        className="bg-blue hover:bg-blue-dark text-white py-2 pl-6 pr-8 mb-4 rounded no-underline inline-flex items-center xl:text-xl xl:py-3"
+                        className="bg-blue hover:bg-blue-dark trans-y text-white py-2 pl-6 pr-8 mb-4 rounded no-underline inline-flex items-center xl:text-xl xl:py-3"
                         href={work.link}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -172,7 +169,7 @@ export default class IndexPage extends React.Component {
                     to={post.fields.slug}
                     key={post.id}
                   >
-                    <div className="post-card">
+                    <div className="scale-up">
                       <div className="hidden md:block">
                         <Img
                           fluid={post.frontmatter.image.childImageSharp.fluid}
@@ -223,13 +220,14 @@ export default class IndexPage extends React.Component {
               </p>
               <Link
                 to="/about"
-                className="bg-blue hover:bg-blue-dark text-white py-3 px-6 rounded no-underline inline-flex items-center text-lg xl:text-xl"
+                className="bg-blue hover:bg-blue-dark hover:shadow trans-y text-white py-3 px-6 rounded no-underline inline-flex items-center text-lg xl:text-xl"
               >
                 {cont.button}
               </Link>
             </div>
           </div>
         </section>
+        <Footer />
       </Layout>
     );
   }

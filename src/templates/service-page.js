@@ -2,6 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import Hero from "../components/Hero";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import Content, { HTMLContent } from '../components/Content'
 
 export const ServicePageTemplate = ({ title, content, contentComponent }) => {
@@ -22,9 +25,14 @@ export const ServicePageTemplate = ({ title, content, contentComponent }) => {
     //     </div>
     //   </div>
     // </section>
-    <div>
-      <PageContent className="content" content={content} />
-    </div>
+    <section className="bg-blue-darkest text-white">
+
+      <Hero />
+      
+      <div className="container mx-auto">
+        <PageContent className="content" content={content} />
+      </div>
+    </section>
   )
 }
 
@@ -39,11 +47,13 @@ const ServicePage = ({ data }) => {
 
   return (
     <Layout>
+      <Navbar classes="bg-blue-darkest" logo="text-white lg:text-5xl" navItems="text-grey-dark" menuBg="bg-blue-darker" menuBtn="text-white"/>
       <ServicePageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
         content={post.html}
       />
+      <Footer />
     </Layout>
   )
 }

@@ -19,50 +19,50 @@ const Navbar = class extends React.Component {
   render() {
     const menuBtn = this.state.btnClick;
     return (
-      <nav role="navigation" aria-label="main-navigation">
+      <nav role="navigation" aria-label="main-navigation" className={this.props.classes}>
         <div className="container mx-auto">
-          <div className="flex items-center justify-between flex-wrap md:py-4 md:px-4">
+          <div className="flex items-center justify-between flex-wrap md:py-4 md:px-4 lg:px-4 xl:px-0">
             <div className="flex items-center flex-no-shrink text-black pt-2">
               <div className="text-blue pb-2 pl-4 md:pl-0">
-                <Logo classes="text-black lg:text-5xl" layout="items-center" svg="lg:h-10 lg:w-10" />
+                <Logo classes={this.props.logo} layout="items-center" svg="lg:h-10 lg:w-10" />
               </div>
             </div>
-            <div className="block pin-t pin-r absolute md:hidden">
+            <div className="md:hidden">
               <button
                 onClick={this.handleClick}
-                className="navbar-burger flex items-center px-6 py-5 bg-grey-lightest border-none focus:outline-none"
+                className={`${this.props.menuBg} navbar-burger flex items-center px-6 py-4 border-none focus:outline-none`}
                 data-target="navMenu"
               >
                 {menuBtn ? (
-                  <Menu classes="fill-current h-4 w-4 font-grey-darker" />
+                  <Menu classes={`fill-current h-5 w-5 ${this.props.menuBtn}`} />
                 ) : (
-                  <Close classes="fill-current h-4 w-4 font-grey-darker" />
+                  <Close classes={`fill-current h-5 w-5 ${this.props.menuBtn}`} />
                 )}
               </button>
             </div>
             <div
               id="navMenu"
-              className={
-                "w-full flex-grow bg-grey-lightest py-6 md:flex md:flex-initial md:items-center md:w-auto md:bg-transparent md:py-0 " +
+              className=
+                {`w-full flex-grow ${this.props.menuBg} py-6 md:flex md:flex-initial md:items-center md:w-auto md:bg-transparent md:py-0 ` +
                 (menuBtn ? "block" : "hidden")
               }
             >
               <div className="text-lg flex flex-col text-center md:flex-row md:text-left">
                 <Link
-                  to="/service"
-                  className="nav-item hover:bg-blue-dark hover:text-white mt-6 md:mr-8 md:mt-0 lg:mr-8"
+                  to="/services"
+                  className={`${this.props.navItems} nav-item hover:bg-blue-dark hover:shadow trans-y hover:text-white mt-4 md:mr-8 md:mt-0 lg:mr-8`}
                 >
                   services
                 </Link>
                 <Link
                   to="/blog"
-                  className="block nav-item hover:bg-blue-dark hover:text-white mt-6 md:mr-8 md:mt-0 lg:mr-8"
+                  className={`${this.props.navItems} block nav-item hover:bg-blue-dark hover:shadow trans-y hover:text-white mt-6 md:mr-8 md:mt-0 lg:mr-8`}
                 >
                   work
                 </Link>
                 <Link
                   to="/contact"
-                  className="block nav-item hover:bg-blue-dark hover:text-white mt-6 md:mt-0"
+                  className={`${this.props.navItems} block nav-item hover:bg-blue-dark hover:shadow trans-y hover:text-white mt-6 md:mt-0`}
                 >
                   let's talk
                 </Link>

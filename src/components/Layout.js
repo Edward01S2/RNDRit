@@ -2,8 +2,6 @@ import React from "react";
 import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
 
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import "../css/style.css";
 
 const TemplateWrapper = ({ children }) => (
@@ -51,10 +49,6 @@ const TemplateWrapper = ({ children }) => (
             href="/img/safari-pinned-tab.svg"
             color="#ff4400"
           />
-          <link
-            href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Roboto:400,700,900"
-            rel="stylesheet"
-          />
           <meta name="theme-color" content="#fff" />
 
           <meta property="og:type" content="business.business" />
@@ -62,9 +56,7 @@ const TemplateWrapper = ({ children }) => (
           <meta property="og:url" content="/" />
           <meta property="og:image" content="/img/og-image.jpg" />
         </Helmet>
-        <Navbar />
         <div>{children}</div>
-        <Footer />
       </div>
     )}
   />
