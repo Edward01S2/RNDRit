@@ -48,7 +48,7 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
-      - file: "src/pages/service/index.md"
+      - file: "src/pages/services/index.md"
         label: "Services"
         name: "services"
         fields:
