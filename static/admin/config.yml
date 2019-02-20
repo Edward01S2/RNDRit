@@ -76,7 +76,8 @@ collections:
               fields:
                 [
                   { label: Heading, name: heading, widget: string },
-                  { label: Body, name: body, widget: markdown },
+                  { label: Body, name: body, widget: text },
+                  { label: Bullets, name: bullets, widget: list }
                 ]
             }
       - file: "src/pages/home/index.md"

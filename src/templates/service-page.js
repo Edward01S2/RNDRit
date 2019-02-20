@@ -20,17 +20,18 @@ const ServicePage = ({ data }) => {
         menuBg="bg-blue-darker"
         menuBtn="text-white"
       />
-      <section className="bg-blue-darkest text-white">
+      <div className="bg-blue-darkest text-white">
         <Hero
           heading={post.frontmatter.hero.heading}
           description={post.frontmatter.hero.description}
           pClass="text-grey-dark"
         />
 
-        <div className="container mx-auto">
-          <PageContent className="content" content={post.html} />
-        </div>
-      </section>
+        <section className="container mx-auto">
+          <h3>{post.frontmatter.point.heading}</h3>
+          <PageContent className="content" content={post.frontmatter.point.body} />
+        </section>
+      </div>
 
       <Footer />
     </Layout>
@@ -52,6 +53,10 @@ export const servicePageQuery = graphql`
         hero {
           heading
           description
+        }
+        point {
+          heading
+          body
         }
       }
     }
