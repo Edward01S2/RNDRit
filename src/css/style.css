@@ -124,6 +124,42 @@ a {
   transition: fill 1s;
 }
 
+.triangle path{
+  stroke: #fff;
+  stroke-width: 2px;
+}  
+
+@keyframes offset {
+  to {
+    stroke-dashoffset: 0px;
+  }
+}
+
+.triangleAnimation {
+  animation-name: offset;
+}
+
+#tri-mid, #tri-top, #tri-bot {
+  animation: offset 7s linear forwards;
+}
+
+#tri-top {
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+  animation-delay: 1.3s;
+}
+
+#tri-mid {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation-delay: 0.7s;
+}
+
+#tri-bot {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+}
+
 @responsive {
   .order-0 { order: 0; }
   .order-1 { order: 1; }

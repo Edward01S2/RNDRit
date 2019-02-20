@@ -31,6 +31,7 @@
     "parcel-bundler": "^1.9.4",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
+    "react-animate-on-scroll": "^2.1.5",
     "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0",
     "tailwindcss": "^0.7.3",
