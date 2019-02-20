@@ -59,7 +59,6 @@ collections:
               default: "service-page",
             }
           - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
           - {
               label: Hero,
               name: hero,
@@ -69,6 +68,16 @@ collections:
                   { label: Heading, name: heading, widget: string },
                   { label: Description, name: description, widget: text },
                 ],
+            }
+          - {
+              label: Point,
+              name: point,
+              widget: object,
+              fields:
+                [
+                  { label: Heading, name: heading, widget: string },
+                  { label: Body, name: body, widget: markdown },
+                ]
             }
       - file: "src/pages/home/index.md"
         label: "Home"
