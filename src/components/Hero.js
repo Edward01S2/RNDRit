@@ -7,7 +7,7 @@ const Hero = class extends React.Component {
     }
     return (
       <section id="hero" className="container mx-auto">
-        <div className="py-40 px-4 xl:py-56">
+        <div className="py-40 px-8 xl:py-56">
           <div className="font-robot md:text-center md:w-3/5 md:m-auto lg:w-1/2">
             <h1
               className="font-bold text-5xl xl:text-6xl"

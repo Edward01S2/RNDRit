@@ -23,7 +23,7 @@ const Navbar = class extends React.Component {
         <div className="container mx-auto">
           <div className="flex items-center justify-between flex-wrap md:py-4 md:px-4 lg:px-4 xl:px-0 xl:py-2">
             <div className="flex items-center flex-no-shrink text-black pt-2">
-              <div className="text-blue pb-2 pl-4 md:pl-0">
+              <div className="text-blue pb-2 pl-8 md:pl-0">
                 <Logo classes={this.props.logo} layout="items-center" svg="lg:h-10 lg:w-10" />
               </div>
             </div>

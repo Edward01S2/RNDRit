@@ -31,8 +31,8 @@ const ServicePage = ({ data }) => {
         />
 
         <section className="container mx-auto">
-          <div className="flex flex-col px-4">
-            <div className="mx-auto mb-8">
+          <div className="flex flex-col px-8">
+            <div className="mx-auto mb-12">
               <ScrollAnimation animateIn="triangleAnimation" duration="7s">
                 <TriSvg className="triangle fill-current text-white h-64 w-64"/>
               </ScrollAnimation>

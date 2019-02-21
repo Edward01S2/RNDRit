@@ -80,6 +80,7 @@ collections:
                   { label: Bullets, name: bullets, widget: list }
                 ]
             }
+          - { label: Header, name: header, widget: text }
       - file: "src/pages/home/index.md"
         label: "Home"
         name: "home"

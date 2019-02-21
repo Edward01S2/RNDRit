@@ -10,12 +10,12 @@ const Tech = class extends React.Component {
 
     return (
       <section className="container mx-auto">
-    <div className="py-20 px-4 md:px-8 md:py-24 lg:py-32 lg:px-16 xl:py-36">
+    <div className="py-20 px-8 md:px-8 md:py-24 lg:py-32 lg:px-16 xl:py-36">
     <p className="font-open uppercase text-sm tracking-wide pb-4">{this.props.data.sub}</p>
     <div className="md:grid md:grid-columns-2">
       <div>
         <h3
-          className={`font-robot text-4xl font-bold border-l-4 border-blue-dark pl-4 lg:text-5xl`}
+          className={`font-robot text-3xl font-bold border-l-4 border-blue-dark pl-4 lg:text-5xl`}
           dangerouslySetInnerHTML={createMarkup(this.props.data.head)}
         >
         </h3>
