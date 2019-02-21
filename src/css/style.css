@@ -136,7 +136,7 @@ a {
 }
 
 .triangleAnimation {
-  animation-name: offset;
+  animation: offset 7s linear forwards;
 }
 
 #tri-mid, #tri-top, #tri-bot {
