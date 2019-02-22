@@ -135,27 +135,26 @@ a {
   }
 }
 
-.triangleAnimation {
+.triangleAnim {
   animation: offset 7s linear forwards;
 }
 
-#tri-mid, #tri-top, #tri-bot {
+.tri-top {
   animation: offset 7s linear forwards;
-}
-
-#tri-top {
   stroke-dasharray: 700;
   stroke-dashoffset: 700;
   animation-delay: 1.3s;
 }
 
-#tri-mid {
+.tri-mid {
+  animation: offset 7s linear forwards;
   stroke-dasharray: 600;
   stroke-dashoffset: 600;
   animation-delay: 0.7s;
 }
 
-#tri-bot {
+.tri-bot {
+  animation: offset 7s linear forwards;
   stroke-dasharray: 600;
   stroke-dashoffset: 600;
 }
