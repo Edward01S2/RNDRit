@@ -71,7 +71,7 @@ body {
 }
 
 .trans {
-    transition: all .25s;
+    transition: all .27s;
 }
 
 a {
@@ -117,6 +117,7 @@ a {
   stroke:#000;
   stroke-width: 1;
 }
+
 .fadein {
   fill: #000;
   -webkit-transition: fill 1s;
@@ -124,39 +125,57 @@ a {
   transition: fill 1s;
 }
 
-.triangle path{
-  stroke: #fff;
-  stroke-width: 2px;
-}  
-
 @keyframes offset {
   to {
     stroke-dashoffset: 0px;
   }
 }
 
-.triangleAnim {
-  animation: offset 7s linear forwards;
-}
-
 .tri-top {
-  animation: offset 7s linear forwards;
+  animation: offset 6s linear forwards;
   stroke-dasharray: 700;
   stroke-dashoffset: 700;
   animation-delay: 1.3s;
 }
 
 .tri-mid {
-  animation: offset 7s linear forwards;
+  animation: offset 6s linear forwards;
   stroke-dasharray: 600;
   stroke-dashoffset: 600;
-  animation-delay: 0.7s;
+  animation-delay: 0.9s;
 }
 
 .tri-bot {
-  animation: offset 7s linear forwards;
+  animation: offset 6s linear forwards;
   stroke-dasharray: 600;
   stroke-dashoffset: 600;
+}
+
+.grp1 {
+  animation: offset 9s linear forwards;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+}
+
+.grp2 {
+  animation: offset 9s linear forwards;
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation-delay: 0.9s;
+}
+
+.grp3 {
+  animation: offset 9s linear forwards;
+  stroke-dasharray: 350;
+  stroke-dashoffset: 350;
+  animation-delay: 1.2s;
+}
+
+.grp4 {
+  animation: offset 9s linear forwards;
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation-delay: 1.6s;
 }
 
 @responsive {

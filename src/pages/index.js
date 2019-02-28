@@ -30,7 +30,7 @@ export default class IndexPage extends React.Component {
         <Navbar logo="text-black lg:text-5xl" navItems="text-grey-darker" menuBg="bg-grey-lighter"/>
 
         {/* HERO SECTION */}
-        <Hero heading={hero.heading} description={hero.description}/>
+        <Hero heading={hero.heading} description={hero.description} hSize="text-5xl"/>
 
         {/* LATEST WORK SECTION */}
         <section id="latest-work" className="container mx-auto">
