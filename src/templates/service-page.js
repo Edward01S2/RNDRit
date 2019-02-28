@@ -35,7 +35,7 @@ const ServicePage = ({ data }) => {
         <section className="container mx-auto">
           <div className="flex flex-col px-8">
             <div className="mx-auto mb-12">
-              <ScrollAnimation animateIn="tri-bot tri-mid tri-top" animateOnce={true} offset={250} animatePreScroll={false}>
+              <ScrollAnimation animateIn="tri-bot tri-mid tri-top" animateOnce={true} offset={25} animatePreScroll={false}>
                 <TriSvg className="triangle fill-current text-white h-64 w-64" />
               </ScrollAnimation>
             </div>
@@ -73,7 +73,7 @@ const ServicePage = ({ data }) => {
         <section className="container mx-auto">
           <div className="flex flex-col px-8">
             <div className="mx-auto mb-12">
-              <ScrollAnimation animateIn="grp1 grp2 grp3 grp4" animateOnce={true} animatePreScroll={false}>
+              <ScrollAnimation animateIn='grp1 grp2 grp3 grp4' animateOnce={true} offset={50} delay={1000} animatePreScroll={false}>
                 <CirSvg className="circle fill-current text-white h-64 w-64" />
               </ScrollAnimation>
             </div>
