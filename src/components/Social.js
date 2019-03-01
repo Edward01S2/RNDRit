@@ -10,13 +10,13 @@ const Social = ({ classes, link }) => (
       <Facebook className={`fill-current h-5 w-5 text-grey-dark ${link}`} />
     </a>
     <a href="twitter">
-      <Twitter className={`fill-current h-5 pl-5 text-grey-dark ${link} md:pl-6`} />
+      <Twitter className={`fill-current h-5 w-5 text-grey-dark ml-5 ${link} md:ml-6`} />
     </a>
     <a href="instagram">
-      <Instagram className={`pl-5 text-grey-dark fill-current h-5 ${link} md:pl-6`} />
+      <Instagram className={`fill-current h-5 w-5 text-grey-dark ml-5 ${link} md:ml-6`} />
     </a>
     <a href="linkedin">
-      <Linkedin className={`pl-5 text-grey-dark fill-current h-5 ${link} md:pl-6`} />
+      <Linkedin className={`fill-current h-5 w-5 text-grey-dark ml-5 ${link} md:ml-6`} />
     </a>
   </div>
 );

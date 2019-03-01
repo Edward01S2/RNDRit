@@ -57,6 +57,8 @@ export default class IndexPage extends React.Component {
                           <svg
                             className="fill-current h-3 w-3"
                             xmlns="http://www.w3.org/2000/svg"
+                            width="1"
+                            height="1"
                             viewBox="0 0 20 20"
                           >
                             <path d="M16.172 9l-6.071-6.071 1.414-1.414L20 10l-.707.707-7.778 7.778-1.414-1.414L16.172 11H0V9z" />
@@ -79,6 +81,8 @@ export default class IndexPage extends React.Component {
                       <svg
                         className="fill-current h-4 w-4"
                         xmlns="http://www.w3.org/2000/svg"
+                        width="1"
+                        height="1"
                         viewBox="0 0 20 20"
                       >
                         <path d="M10 1l10 6-10 6L0 7l10-6zm6.67 10L20 13l-10 6-10-6 3.33-2L10 15l6.67-4z" />
@@ -100,6 +104,8 @@ export default class IndexPage extends React.Component {
                         <svg
                           className="fill-current h-4 w-4 xl:h-5 xl:w-5"
                           xmlns="http://www.w3.org/2000/svg"
+                          width="1"
+                          height="1"
                           viewBox="0 0 20 20"
                         >
                           <path d="M9.26 13a2 2 0 0 1 .01-2.01A3 3 0 0 0 9 5H5a3 3 0 0 0 0 6h.08a6.06 6.06 0 0 0 0 2H5A5 5 0 0 1 5 3h4a5 5 0 0 1 .26 10zm1.48-6a2 2 0 0 1-.01 2.01A3 3 0 0 0 11 15h4a3 3 0 0 0 0-6h-.08a6.06 6.06 0 0 0 0-2H15a5 5 0 0 1 0 10h-4a5 5 0 0 1-.26-10z" />
@@ -131,6 +137,8 @@ export default class IndexPage extends React.Component {
                       className="h-6 w-6 fill-current"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
+                      width="1"
+                      height="1"
                       dangerouslySetInnerHTML={createMarkup(card.icon)}
                     />
                     <span className="pl-3 tracking-wide font-sans font-normal">
@@ -188,6 +196,8 @@ export default class IndexPage extends React.Component {
                             <svg
                               className="h-2 w-2 pl-2 fill-current"
                               xmlns="http://www.w3.org/2000/svg"
+                              width="1"
+                              height="1"
                               viewBox="0 0 20 20"
                             >
                               <path d="M16.172 9l-6.071-6.071 1.414-1.414L20 10l-.707.707-7.778 7.778-1.414-1.414L16.172 11H0V9z" />

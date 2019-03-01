@@ -35,8 +35,8 @@ const ServicePage = ({ data }) => {
         <section className="container mx-auto">
           <div className="flex flex-col px-8">
             <div className="mx-auto mb-12">
-              <ScrollAnimation animateIn="tri-bot tri-mid tri-top" animateOnce={true} offset={25} animatePreScroll={false}>
-                <TriSvg className="triangle fill-current text-white h-64 w-64" />
+              <ScrollAnimation animateIn="tri-top tri-mid tri-bot" animatePreScroll={false} animateOnce={true}>
+                <TriSvg className="triangle stroke-current text-grey-lightest h-64 w-64" />
               </ScrollAnimation>
             </div>
             <div>
@@ -51,6 +51,8 @@ const ServicePage = ({ data }) => {
                       <svg
                         className="h-4 w-4 fill-current"
                         xmlns="http://www.w3.org/2000/svg"
+                        width="1" 
+                        height="1"
                         viewBox="0 0 20 20"
                       >
                         <path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM6.7 9.29L9 11.6l4.3-4.3 1.4 1.42L9 14.4l-3.7-3.7 1.4-1.42z" />
@@ -73,8 +75,8 @@ const ServicePage = ({ data }) => {
         <section className="container mx-auto">
           <div className="flex flex-col px-8">
             <div className="mx-auto mb-12">
-              <ScrollAnimation animateIn='grp1 grp2 grp3 grp4' animateOnce={true} offset={50} delay={1000} animatePreScroll={false}>
-                <CirSvg className="circle fill-current text-white h-64 w-64" />
+              <ScrollAnimation animateIn='grp1 grp2 grp3 grp4' animatePreScroll={false} animateOnce={true}>
+                <CirSvg className="circle stroke-current text-white h-64 w-64" />
               </ScrollAnimation>
             </div>
             <div>
@@ -89,6 +91,8 @@ const ServicePage = ({ data }) => {
                       <svg
                         className="h-4 w-4 fill-current"
                         xmlns="http://www.w3.org/2000/svg"
+                        width="1"
+                        height="1"
                         viewBox="0 0 20 20"
                       >
                         <path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM6.7 9.29L9 11.6l4.3-4.3 1.4 1.42L9 14.4l-3.7-3.7 1.4-1.42z" />
