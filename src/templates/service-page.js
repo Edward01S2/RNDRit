@@ -9,6 +9,7 @@ import Content, { HTMLContent } from "../components/Content";
 import uuid from "uuid";
 import TriSvg from "../img/triangle.svg";
 import WebSvg from "../img/web.svg";
+import Tech from "../components/Tech";
 import ScrollAnimation from "react-animate-on-scroll";
 
 const ServicePage = ({ data }) => {
@@ -33,17 +34,17 @@ const ServicePage = ({ data }) => {
         />
 
         <section className="container mx-auto">
-          <div className="flex flex-col px-8">
-            <div className="mx-auto mb-12">
+          <div className="flex flex-col px-8 md:flex-row">
+            <div className="mx-auto mb-12 md:w-1/2 md:mb-0 md:flex md:items-center md:justify-center md:order-1">
               <ScrollAnimation
-                animateIn="tri-top tri-mid tri-bot"
+                animateIn="trig-anim"
                 animatePreScroll={false}
                 animateOnce={true}
               >
-                <TriSvg className="triangle stroke-current text-grey-lightest h-64 w-64" />
+                <TriSvg className="stroke-current text-grey-lightest h-64 w-64" />
               </ScrollAnimation>
             </div>
-            <div>
+            <div className="md:w-1/2 md:order-0">
               <h3 className="text-2xl pb-4 leading-normal">
                 {post.frontmatter.point.heading}
               </h3>
@@ -71,30 +72,30 @@ const ServicePage = ({ data }) => {
         </section>
 
         <section>
-          <div className="px-8 py-24 text-grey-dark text-center">
+          <div className="px-8 py-24 text-grey-dark text-center md:px-32 md:leading-normal md:py-32">
             <h3 className="text-3xl">{post.frontmatter.header}</h3>
           </div>
         </section>
 
-        <section className="container mx-auto pb-24">
-          <div className="flex flex-col px-8">
-            <div className="mx-auto mb-12">
+        <section className="container mx-auto">
+          <div className="flex flex-col px-8 md:flex-row">
+            <div className="mx-auto mb-12 md:w-1/2 md:order-1 md:flex md:items-center md:justify-center md:mb-0">
               <ScrollAnimation
-                animateIn="grp1 grp2 grp3 grp4"
+                animateIn="web-anim"
                 animatePreScroll={false}
                 animateOnce={true}
               >
                 <WebSvg className="circle stroke-current fill-current text-white h-64 w-64" />
               </ScrollAnimation>
             </div>
-            <div>
+            <div className="md:w-1/2 md:order-0">
               <h3 className="text-2xl pb-4 leading-normal">
-                {post.frontmatter.point.heading}
+                {post.frontmatter.point2.heading}
               </h3>
               <div className="text-grey-dark leading-loose">
-                <p className="pb-4">{post.frontmatter.point.body}</p>
+                <p className="pb-4">{post.frontmatter.point2.body}</p>
                 <ul className="list-reset">
-                  {post.frontmatter.point.bullets.map(tag => (
+                  {post.frontmatter.point2.bullets.map(tag => (
                     <li key={uuid.v4()} className="flex items-center">
                       <svg
                         className="h-4 w-4 fill-current"
@@ -114,7 +115,7 @@ const ServicePage = ({ data }) => {
           </div>
         </section>
 
-        {/* <Tech data={it} width={36} /> */}
+        <Tech data={post.frontmatter.tech} subColor="text-grey-dark" />
 
       </div>
 
@@ -145,6 +146,16 @@ export const servicePageQuery = graphql`
           bullets
         }
         header
+        point2 {
+          heading
+          body
+          bullets
+        }
+        tech {
+          sub
+          head
+          description
+        }
       }
     }
   }

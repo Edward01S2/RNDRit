@@ -157,7 +157,7 @@ export default class IndexPage extends React.Component {
         </section>
         
         {/* MANAGED IT & SUPPORT SERVICES */}
-        <Tech data={it} width={36} />
+        <Tech data={it} />
         
         {/* LATEST POSTS */}
         <section className="bg-blue-darker">

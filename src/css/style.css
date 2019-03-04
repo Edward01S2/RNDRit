@@ -131,51 +131,54 @@ a {
   }
 }
 
-.triangle-anim {
+.trig-anim,{
   animation: offset 6s linear forwards;
 }
 
-.tri-top {
+.trig-anim .tri-top {
   animation: offset 6s linear forwards;
   stroke-dasharray: 700;
   stroke-dashoffset: 700;
   animation-delay: 1.3s;
 }
 
-.tri-mid {
+.trig-anim .tri-mid {
   animation: offset 6s linear forwards;
   stroke-dasharray: 600;
   stroke-dashoffset: 600;
   animation-delay: 0.9s;
 }
 
-.tri-bot {
+.trig-anim .tri-bot {
   animation: offset 6s linear forwards;
   stroke-dasharray: 600;
   stroke-dashoffset: 600;
 }
 
-.grp1 {
+.web-anim {
+  animation: offset 10s linear forwards;
+}
+.web-anim .grp1 {
   animation: offset 10s linear forwards;
   stroke-dasharray: 200;
   stroke-dashoffset: 200;
 }
 
-.grp2 {
+.web-anim .grp2 {
   animation: offset 10s linear forwards;
   stroke-dasharray: 300;
   stroke-dashoffset: 300;
   animation-delay: 0.9s;
 }
 
-.grp3 {
+.web-anim .grp3 {
   animation: offset 10s linear forwards;
   stroke-dasharray: 350;
   stroke-dashoffset: 350;
   animation-delay: 1.2s;
 }
 
-.grp4 {
+.web-anim .grp4 {
   animation: offset 10s linear forwards;
   stroke-dasharray: 600;
   stroke-dashoffset: 600;
