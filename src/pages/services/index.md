@@ -33,7 +33,7 @@ tech:
     We build successful products that people use and love. Our iOS and Android
     app development teams are focused on delivering 100% native products,
     following a structured and test-driven process.
-  head: Creating Products
+  head: Creating<br>Products
   sub: User Research
 ---
 
