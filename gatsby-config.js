@@ -87,7 +87,7 @@ module.exports = {
       options: {
         //develop: true,            // Activates purging in npm run develop
         tailwind: true,
-        purgeOnly: ['src/css/style.css'], // Purge only tailwind
+        purgeOnly: ['src/css/tailwind.css'], // Purge only tailwind
         //purgeOnly: ['/all.sass'], // applies purging only on the bulma css file
       },
     }, // must be after other CSS plugins
