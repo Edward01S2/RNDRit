@@ -31,8 +31,7 @@ point2:
 tech:
   description: >-
     We build successful products that people use and love. Our iOS and Android
-    app development teams are focused on delivering 100% native products,
-    following a structured and test-driven process.
+    app development teams are focused.
   head: Creating Products
   sub: User Research
 ---
