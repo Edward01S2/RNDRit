@@ -156,27 +156,27 @@ a {
 }
 
 .grp1 {
-  animation: offset 12s linear forwards;
+  animation: offset 10s linear forwards;
   stroke-dasharray: 200;
   stroke-dashoffset: 200;
 }
 
 .grp2 {
-  animation: offset 12s linear forwards;
+  animation: offset 10s linear forwards;
   stroke-dasharray: 300;
   stroke-dashoffset: 300;
   animation-delay: 0.9s;
 }
 
 .grp3 {
-  animation: offset 12s linear forwards;
+  animation: offset 10s linear forwards;
   stroke-dasharray: 350;
   stroke-dashoffset: 350;
   animation-delay: 1.2s;
 }
 
 .grp4 {
-  animation: offset 12s linear forwards;
+  animation: offset 10s linear forwards;
   stroke-dasharray: 600;
   stroke-dashoffset: 600;
   animation-delay: 1.6s;

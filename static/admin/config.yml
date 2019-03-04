@@ -81,6 +81,28 @@ collections:
                 ]
             }
           - { label: Header, name: header, widget: text }
+          - {
+              label: Point 2,
+              name: point2,
+              widget: object,
+              fields:
+                [
+                  { label: Heading, name: heading, widget: string },
+                  { label: Body, name: body, widget: text },
+                  { label: Bullets, name: bullets, widget: list }
+                ]
+            }
+          - {
+              label: Tech,
+              name: tech,
+              widget: object,
+              fields:
+                [
+                  { label: Sub-Headline, name: sub, widget: string },
+                  { label: Heading, name: head, widget: string },
+                  { label: Description, name: description, widget: text },
+                ],
+            }
       - file: "src/pages/home/index.md"
         label: "Home"
         name: "home"
