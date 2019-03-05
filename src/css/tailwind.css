@@ -60,3 +60,59 @@
   * @import "utilities/background-patterns";
   * @import "utilities/skew-transforms";
   */
+
+  html { 
+    @apply font-sans bg-grey-lightest text-black;
+  }
+  
+  body {
+    margin: 0
+  }
+  
+  .trans {
+      transition: all .27s;
+  }
+  
+  a {
+    transition: all 0.2s ease; 
+    transition-property: transform, opacity, color, border-color, background-color;
+    @apply no-underline;
+  }
+  
+  .text-shadow {
+    text-shadow: 0 1px 3px rgba(0,0,0,0.30);
+  }
+  
+  .nav-item {
+    @apply px-4 py-3 rounded no-underline;
+  }
+  
+  .footer-links {
+    @apply no-underline text-grey-dark leading-normal font-open font-semibold;
+  }
+  
+  .footer-head {
+    @apply pb-4 uppercase font-open tracking-wide text-shadow;
+  }
+  
+  .hero-path {
+    fill: #fff;
+    stroke:#000;
+    stroke-width: 1;
+  }
+  
+  .fadein {
+    fill: #000;
+    -webkit-transition: fill 1s;
+    -moz-transition: fill 1s;
+    transition: fill 1s;
+  }
+  
+  @responsive {
+    .order-0 { order: 0; }
+    .order-1 { order: 1; }
+    .order-2 { order: 2; }
+    .order-3 { order: 3; }
+    .order-4 { order: 4; }
+    .order-5 { order: 5; }
+  }
