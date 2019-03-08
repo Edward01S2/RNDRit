@@ -65,20 +65,12 @@
     @apply font-sans bg-grey-lightest text-black;
   }
   
-  body {
-    margin: 0
-  }
-  
-  .trans {
-      transition: all .27s;
-  }
-  
   a {
     transition: all 0.2s ease; 
     transition-property: transform, opacity, color, border-color, background-color;
     @apply no-underline;
   }
-  
+
   .text-shadow {
     text-shadow: 0 1px 3px rgba(0,0,0,0.30);
   }
@@ -93,19 +85,6 @@
   
   .footer-head {
     @apply pb-4 uppercase font-open tracking-wide text-shadow;
-  }
-  
-  .hero-path {
-    fill: #fff;
-    stroke:#000;
-    stroke-width: 1;
-  }
-  
-  .fadein {
-    fill: #000;
-    -webkit-transition: fill 1s;
-    -moz-transition: fill 1s;
-    transition: fill 1s;
   }
   
   @responsive {
