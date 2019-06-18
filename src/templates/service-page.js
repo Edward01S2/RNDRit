@@ -14,22 +14,22 @@ import ScrollAnimation from "react-animate-on-scroll";
 
 const ServicePage = ({ data }) => {
   const { markdownRemark: post } = data;
-  const PageContent = HTMLContent || Content;
+  //const PageContent = HTMLContent || Content;
 
   return (
     <Layout>
       <Navbar
-        classes="bg-blue-darkest"
+        classes="bg-blue-900"
         logo="text-white lg:text-5xl"
-        navItems="text-grey-dark"
-        menuBg="bg-blue-darker"
+        navItems="text-gray-600"
+        menuBg="bg-blue-800"
         menuBtn="text-white"
       />
-      <div className="bg-blue-darkest text-white">
+      <div className="bg-blue-900 text-white">
         <Hero
           heading={post.frontmatter.hero.heading}
           description={post.frontmatter.hero.description}
-          pClass="text-grey-dark"
+          pClass="text-gray-600"
           hSize="text-5xl"
         />
 
@@ -41,16 +41,16 @@ const ServicePage = ({ data }) => {
                 animatePreScroll={false}
                 animateOnce={true}
               >
-                <TriSvg className="stroke-current text-grey-lightest h-64 w-64" />
+                <TriSvg className="stroke-current text-gray-100 h-64 w-64" />
               </ScrollAnimation>
             </div>
             <div className="md:w-1/2 md:order-0">
               <h3 className="text-2xl pb-4 leading-normal">
                 {post.frontmatter.point.heading}
               </h3>
-              <div className="text-grey-dark leading-loose">
+              <div className="text-gray-600 leading-loose">
                 <p className="pb-4">{post.frontmatter.point.body}</p>
-                <ul className="list-reset">
+                <ul className="">
                   {post.frontmatter.point.bullets.map(tag => (
                     <li key={uuid.v4()} className="flex items-center">
                       <svg
@@ -72,7 +72,7 @@ const ServicePage = ({ data }) => {
         </section>
 
         <section>
-          <div className="px-8 py-24 text-grey-dark text-center md:px-32 md:leading-normal md:py-32">
+          <div className="px-8 py-24 text-gray-600 text-center md:px-32 md:leading-normal md:py-32">
             <h3 className="text-3xl">{post.frontmatter.header}</h3>
           </div>
         </section>
@@ -92,9 +92,9 @@ const ServicePage = ({ data }) => {
               <h3 className="text-2xl pb-4 leading-normal">
                 {post.frontmatter.point2.heading}
               </h3>
-              <div className="text-grey-dark leading-loose">
+              <div className="text-gray-600 leading-loose">
                 <p className="pb-4">{post.frontmatter.point2.body}</p>
-                <ul className="list-reset">
+                <ul className="">
                   {post.frontmatter.point2.bullets.map(tag => (
                     <li key={uuid.v4()} className="flex items-center">
                       <svg
@@ -115,7 +115,7 @@ const ServicePage = ({ data }) => {
           </div>
         </section>
 
-        <Tech data={post.frontmatter.tech} subColor="text-grey-dark" />
+        <Tech data={post.frontmatter.tech} subColor="text-gray-600" hSize="lg:text-4xl"/>
 
       </div>
 

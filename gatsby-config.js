@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: 'rndr.tech',
@@ -5,8 +9,20 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sass',
-    'gatsby-plugin-emotion',
+    {
+      resolve: `gatsby-source-prismic`,
+      options: {
+        repositoryName: `rndr`,
+        accessToken: `${process.env.API_KEY}`,
+        linkResolver: ({ node, key, value }) => post => `/${post.uid}`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        postCssPlugins: [require('tailwindcss'), require('autoprefixer')],
+      },
+    },
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
@@ -69,6 +85,17 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `rndr.tech`,
+        short_name: `rndr.tech`,
+        start_url: `/`,
+        background_color: `#fff`,
+        //theme_color: `#04B0C6`,
+        //icon: `src/img/ta_favicon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`,
@@ -79,18 +106,10 @@ module.exports = {
       options: {
         //develop: true,            // Activates purging in npm run develop
         tailwind: true,
-        purgeOnly: ['src/css/tailwind.css'], // Purge only tailwind
+        purgeOnly: ['src/css/style.scss'], // Purge only tailwind
         //purgeOnly: ['/all.sass'], // applies purging only on the bulma css file
       },
     }, // must be after other CSS plugins
-    {
-      resolve:`gatsby-plugin-postcss`,
-      // options: {
-      //   postCssPlugins: [
-      //     require('autoprefixer')(), 
-      //   ],
-      // },
-    },
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
 }

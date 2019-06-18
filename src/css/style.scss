@@ -1,5 +1,6 @@
-@import 'tailwind.css';
+@import "tailwind";
 
+/* purgecss start ignore */
 body {
   margin: 0
 }
@@ -100,3 +101,31 @@ body {
   stroke-dashoffset: 600;
   animation-delay: 1.6s;
 }
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+    color: #718096;
+  }
+
+  50% {
+    transform: scale(1.7);
+    color: #edf2f7;
+  }
+
+  to {
+    transform: scale(1);
+    color: white;
+  }
+}
+
+.pulse {
+  animation-name: pulse;
+  animation-duration: 5s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+/* purgecss end ignore */

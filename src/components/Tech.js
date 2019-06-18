@@ -13,14 +13,14 @@ const Tech = class extends React.Component {
           <p className={`font-open uppercase text-sm tracking-wide pb-4 ${this.props.subColor}`}>
             {this.props.data.sub}
           </p>
-          <div className="md:grid md:grid-columns-2">
-            <div>
+          <div className="lg:flex">
+            <div className="w-1/2">
               <h3
-                className={`font-robot text-3xl font-bold border-l-4 tracking-wide border-blue-dark pl-4 lg:text-5xl`}
+                className={`font-robot text-3xl font-bold border-l-4 tracking-wide border-blue-600 pl-4 ${this.props.hSize}`}
                 dangerouslySetInnerHTML={createMarkup(this.props.data.head)}
               />
             </div>
-            <p className={`font-semibold opacity-75 leading-loose pt-4 ${this.props.subColor} md:p-0 lg:pl-16 xl:text-lg`}>
+            <p className={`font-semibold opacity-75 leading-loose ${this.props.subColor} md:pt-6 lg:pt-0 lg:w-1/2 xl:text-lg`}>
               {this.props.data.description}
             </p>
           </div>

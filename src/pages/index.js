@@ -27,7 +27,7 @@ export default class IndexPage extends React.Component {
 
     return (
       <Layout>
-        <Navbar logo="text-black lg:text-5xl" navItems="text-grey-darker" menuBg="bg-grey-lighter"/>
+        <Navbar logo="text-black lg:text-5xl" navItems="text-gray-700" menuBg="bg-grey-200"/>
 
         {/* HERO SECTION */}
         <Hero heading={hero.heading} description={hero.description} hSize="text-5xl"/>
@@ -35,22 +35,22 @@ export default class IndexPage extends React.Component {
         {/* LATEST WORK SECTION */}
         <section id="latest-work" className="container mx-auto">
           <div className="px-4 lg:px-8">
-            <div className="flex flex-col bg-blue-darkest md:flex-row">
+            <div className="flex flex-col bg-blue-800 md:flex-row">
               <div className="md:w-1/2 md:order-1">
                 <Img fluid={work.image.childImageSharp.fluid} />
               </div>
               <div className="flex flex-col md:w-1/2 md:order-0">
-                <div className="bg-blue-darker">
-                  <div className="flex justify-between items-center text-grey-light font-semibold py-4 px-4 md:py-6 lg:px-8 py-6">
+                <div className="bg-blue-900">
+                  <div className="flex justify-between items-center text-gray-100 font-semibold py-4 px-4 md:py-6 lg:px-8 py-6">
                     <div>
-                      <p className="uppercase text-xs tracking-wide xl:text-base">
+                      <p className="uppercase text-xs tracking-wide lg:text-sm xl:text-base">
                         Latest Work
                       </p>
                     </div>
                     <div>
                       <Link
                         to="/work"
-                        className="text-grey-light tracking-wide text-xs no-underline flex items-center hover:text-white xl:text-base"
+                        className="text-gray-100 tracking-wide text-xs no-underline flex items-center hover:text-white lg:text-sm xl:text-base"
                       >
                         <span>See All</span>
                         <span className="pl-3">
@@ -69,15 +69,15 @@ export default class IndexPage extends React.Component {
                   </div>
                 </div>
 
-                <div className="px-4 py-8 flex-grow flex justify-center items-center md:px-6 lg:px-16">
+                <div className="px-4 py-8 flex-grow flex justify-center items-center md:px-4 lg:px-16">
                   <div className="flex flex-col">
-                    <h3 className="text-3xl font-semi-bold font-robot tracking-wide pb-4 text-blue-lightest lg:pb-6 lg:text-4xl">
+                    <h3 className="text-3xl font-semi-bold font-robot tracking-wide pb-2 text-white md:text-2xl lg:pb-6 lg:text-4xl">
                       {work.title}
                     </h3>
-                    <p className="leading-normal text-grey xl:text-lg">
+                    <p className="leading-normal text-gray-200 md:text-sm lg:text-base xl:text-lg">
                       {work.description}
                     </p>
-                    <div className="flex items-center pt-4 pb-5 text-grey-dark text-sm lg:py-6 xl:text-base">
+                    <div className="flex items-center pt-4 pb-5 text-gray-500 text-sm lg:py-6 xl:text-base">
                       <svg
                         className="fill-current h-4 w-4"
                         xmlns="http://www.w3.org/2000/svg"
@@ -96,7 +96,7 @@ export default class IndexPage extends React.Component {
 
                     <div>
                       <a
-                        className="bg-blue hover:bg-blue-dark trans-y text-white py-2 pl-6 pr-8 mb-4 rounded no-underline inline-flex items-center xl:text-xl xl:py-3"
+                        className="bg-blue-500 hover:bg-blue-600 trans-y text-white py-2 pl-6 pr-8 mb-4 rounded no-underline inline-flex items-center xl:text-xl xl:py-3"
                         href={work.link}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -121,12 +121,12 @@ export default class IndexPage extends React.Component {
         </section>
 
         {/* WEB DEVELOPMENT */}
-        <Tech data={dev} />
+        <Tech data={dev} hSize="lg:text-4xl xl:text-5xl"/>
 
         {/* WEB DEVELOPMENT FEAT */}
         <section
           id="featured"
-          className="bg-blue-dark text-grey-lightest text-shadow text-center"
+          className="bg-blue-600 text-gray-100 text-shadow text-center"
         >
           <div className="container mx-auto">
             <div className="px-4 pt-20 pb-16 flex flex-col md:flex-row">
@@ -145,7 +145,7 @@ export default class IndexPage extends React.Component {
                       {card.title}
                     </span>
                   </h4>
-                  <ul className="text-blue-lighter leading-loose list-reset text-lg">
+                  <ul className="text-blue-100 leading-loose text-lg">
                     {card.list.map(item => (
                       <li key={uuid.v4()}>{item}</li>
                     ))}
@@ -157,12 +157,12 @@ export default class IndexPage extends React.Component {
         </section>
         
         {/* MANAGED IT & SUPPORT SERVICES */}
-        <Tech data={it} />
+        <Tech data={it} hSize="lg:text-4xl xl:text-5xl"/>
         
         {/* LATEST POSTS */}
-        <section className="bg-blue-darker">
+        <section className="bg-blue-700">
           <div className="container mx-auto">
-            <div className="py-20 px-4 lg:px-8 lg:py-24">
+            <div className="py-20 px-4 md:px-8 lg:py-24">
               <div className="text-center text-white">
                 <p className="uppercase text-sm tracking-wide pb-4 text-shadow">Articles</p>
                 <h3 className="text-3xl font-semibold font-robot pb-8 tracking-wide text-shadow lg:text-4xl">
@@ -170,40 +170,43 @@ export default class IndexPage extends React.Component {
                 </h3>
               </div>
 
-              <div className="md:grid md:grid-columns-3 md:grid-gap-4 lg:grid-gap-8 xl:grid-gap-16">
+              <div className="lg:flex">
                 {posts.map(({ node: post }) => (
                   <Link
-                    className="no-underline"
+                    className="no-underline w-1/3"
                     to={post.fields.slug}
                     key={post.id}
                   >
-                    <div className="scale-up">
-                      <div className="hidden md:block">
-                        <Img
-                          fluid={post.frontmatter.image.childImageSharp.fluid}
-                        />
-                      </div>
-                      <div className="no-underline bg-white rounded-sm shadow shadow-md text-black p-4 mb-4 border-l-4 border-blue md:border-none">
-                        <p className="text-xs pb-4 text-blue-darker uppercase font-open font-semibold">
-                          {post.frontmatter.date}
-                        </p>
-                        <p className="pb-4 font-bold text-lg border-b text-blue-darkest md:text-xl">
-                          {post.frontmatter.title}
-                        </p>
-                        <p className="pt-3 no-underline text-xs text-grey-darker lg:text-sm">
-                          Read More{" "}
-                          <span>
-                            <svg
-                              className="h-2 w-2 pl-2 fill-current"
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="1"
-                              height="1"
-                              viewBox="0 0 20 20"
-                            >
-                              <path d="M16.172 9l-6.071-6.071 1.414-1.414L20 10l-.707.707-7.778 7.778-1.414-1.414L16.172 11H0V9z" />
-                            </svg>
-                          </span>
-                        </p>
+                    <div className="scale-up md:mb-4 lg:p-4 xl:p-8">
+                      <div class="flex lg:flex-col">
+                        <div className="hidden md:block md:w-1/4 md:mb-4 lg:mb-0 lg:w-full lg:h-68">
+                          <Img
+                            fluid={post.frontmatter.image.childImageSharp.fluid}
+                            className="md:h-full"
+                          />
+                        </div>
+                        <div className="no-underline bg-white rounded-sm shadow shadow-md text-black p-4 mb-4 border-l-4 border-blue-500 md:border-none md:w-3/4 md:rounded-none md:rounded-r-sm lg:w-full">
+                          <p className="text-xs pb-4 text-blue-800 uppercase font-open font-semibold">
+                            {post.frontmatter.date}
+                          </p>
+                          <p className="pb-4 font-bold text-lg border-b text-blue-900 md:text-xl md:h-20 lg:h-32">
+                            {post.frontmatter.title}
+                          </p>
+                          <p className="pt-3 no-underline text-xs text-gray-800 lg:text-sm">
+                            Read More{" "}
+                            <span>
+                              <svg
+                                className="h-2 w-2 pl-2 fill-current"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="1"
+                                height="1"
+                                viewBox="0 0 20 20"
+                              >
+                                <path d="M16.172 9l-6.071-6.071 1.414-1.414L20 10l-.707.707-7.778 7.778-1.414-1.414L16.172 11H0V9z" />
+                              </svg>
+                            </span>
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </Link>
@@ -217,7 +220,7 @@ export default class IndexPage extends React.Component {
         <section id="contact" className="container mx-auto">
           <div className="py-24 px-4 md:py-32 lg:py-40">
             <div className="text-center">
-              <p className="font-open uppercase text-sm tracking-wide pb-4 text-grey-darker">
+              <p className="font-open uppercase text-sm tracking-wide pb-4 text-gray-800">
                 {cont.sub}
               </p>
               <h3
@@ -230,7 +233,7 @@ export default class IndexPage extends React.Component {
               </p>
               <Link
                 to="/about"
-                className="bg-blue hover:bg-blue-dark hover:shadow trans-y text-white py-3 px-6 rounded no-underline inline-flex items-center text-lg xl:text-xl"
+                className="bg-blue-500 hover:bg-blue-600 hover:shadow trans-y text-white py-3 px-6 rounded no-underline inline-flex items-center text-lg xl:text-xl"
               >
                 {cont.button}
               </Link>

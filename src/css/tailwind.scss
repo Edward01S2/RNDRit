@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { 
+  @apply font-sans bg-gray-100 text-black;
+}
+
+a {
+  transition: all 0.2s ease; 
+  transition-property: transform, opacity, color, border-color, background-color;
+  @apply no-underline;
+}
+
+.text-shadow {
+  text-shadow: 0 1px 3px rgba(0,0,0,0.30);
+}
+
+.nav-item {
+  @apply px-4 py-3 rounded no-underline;
+}
+
+.footer-links {
+  @apply no-underline text-gray-500 leading-normal font-sans font-semibold;
+}
+
+.footer-head {
+  @apply pb-4 uppercase font-sans tracking-widest font-semibold;
+}
+
+@responsive {
+  .order-0 { order: 0; }
+  .order-1 { order: 1; }
+  .order-2 { order: 2; }
+  .order-3 { order: 3; }
+  .order-4 { order: 4; }
+  .order-5 { order: 5; }
+}
