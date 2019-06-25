@@ -2,6 +2,8 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
+//const prismicHtmlSerializer = require('./src/cms/htmlSerializer')
+
 module.exports = {
   siteMetadata: {
     title: 'rndr.tech',
@@ -14,7 +16,15 @@ module.exports = {
       options: {
         repositoryName: `rndr`,
         accessToken: `${process.env.API_KEY}`,
-        linkResolver: ({ node, key, value }) => post => `/${post.uid}`,
+        linkResolver: ({ node, key, value }) => post => {
+          // URL for a product type
+          if (post.type === 'blog') {
+            return '/blog/' + post.uid;
+          }
+         // Backup for all other types
+          `/${post.uid}`
+        },
+        //htmlSerializer: () => prismicHtmlSerializer,
       },
     },
     {

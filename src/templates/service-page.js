@@ -5,7 +5,6 @@ import Layout from "../components/Layout";
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Content, { HTMLContent } from "../components/Content";
 import uuid from "uuid";
 import TriSvg from "../img/triangle.svg";
 import WebSvg from "../img/web.svg";
@@ -21,9 +20,10 @@ const ServicePage = ({ data }) => {
       <Navbar
         classes="bg-blue-900"
         logo="text-white lg:text-5xl"
-        navItems="text-gray-600"
+        navItems="text-gray-400"
         menuBg="bg-blue-800"
         menuBtn="text-white"
+        svg="text-gray-500 hover:text-white"
       />
       <div className="bg-blue-900 text-white">
         <Hero

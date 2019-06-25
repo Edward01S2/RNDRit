@@ -1,6 +1,6 @@
 import React from "react";
-import { StaticQuery, graphql, Link } from "gatsby";
-import { navigate } from "gatsby-link";
+import { StaticQuery, graphql } from "gatsby";
+// import { navigate } from "gatsby-link";
 import Navbar from "../../components/Navbar";
 import Layout from "../../components/Layout";
 import Footer from "../../components/Footer";
@@ -17,11 +17,12 @@ const Contact = ({ data: { prismicContact } }) => {
         navItems="text-gray-400"
         menuBg="bg-blue-800"
         menuBtn="text-white"
+        svg="text-gray-500 hover:text-white"
       />
 
       <section className="bg-blue-900">
         <div className="container mx-auto lg:flex lg:items-center lg:px-16 lg:py-16 xl:px-0 xl:py-24">
-          <div className="py-16 px-8 pb-8 md:px-24 md:py-16 lg:w-1/2 lg:p-0 xl:py-36">
+          <div className="py-16 px-8 pb-12 md:px-24 md:py-16 lg:w-1/2 lg:p-0 xl:py-36">
             <p className={`font-open uppercase text-sm tracking-wide pb-4 text-gray-400`}>
               {prismicContact.data.subtitle.text}
             </p>

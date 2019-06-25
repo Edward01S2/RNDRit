@@ -4,19 +4,19 @@ import Twitter from "../img/twitter.svg";
 import Instagram from "../img/instagram.svg";
 import Linkedin from "../img/linkedin.svg";
 
-const Social = ({ classes, link }) => (
+const Social = ({ classes, link, svg }) => (
   <div className={classes}>
     <a href="facebook">
-      <Facebook className={`fill-current h-5 w-5 text-gray-500 ${link}`} />
+      <Facebook className={`fill-current h-5 w-5 ${svg}`} />
     </a>
     <a href="twitter">
-      <Twitter className={`fill-current h-5 w-5 text-gray-500 ml-5 ${link} md:ml-6`} />
+      <Twitter className={`fill-current h-5 w-5 ml-5 ${svg} md:ml-6`} />
     </a>
     <a href="instagram">
-      <Instagram className={`fill-current h-5 w-5 text-gray-500 ml-5 ${link} md:ml-6`} />
+      <Instagram className={`fill-current h-5 w-5 ml-5 ${svg} md:ml-6`} />
     </a>
     <a href="linkedin">
-      <Linkedin className={`fill-current h-5 w-5 text-gray-500 ml-5 ${link} md:ml-6`} />
+      <Linkedin className={`fill-current h-5 w-5 ml-5 ${svg} md:ml-6`} />
     </a>
   </div>
 );

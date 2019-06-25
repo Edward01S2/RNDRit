@@ -67,7 +67,7 @@ const Navbar = class extends React.Component {
                   let's talk
                 </Link>
 
-                <Social classes="flex items-center justify-center my-6 md:hidden" />
+                <Social classes={`flex items-center justify-center my-6 md:hidden`} svg={this.props.svg}/>
               </div>
             </div>
           </div>

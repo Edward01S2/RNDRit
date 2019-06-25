@@ -3,7 +3,6 @@ import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
 
 import "../css/style.scss";
-//import "../css/tailwind.css";
 
 const TemplateWrapper = ({ children }) => (
   <StaticQuery

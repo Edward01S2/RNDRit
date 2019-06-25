@@ -28,6 +28,35 @@ a {
   @apply pb-4 uppercase font-sans tracking-widest font-semibold;
 }
 
+.content {
+  @apply leading-loose;
+  p {
+    @apply pb-4;
+  }
+  p:first-child:first-letter {
+    @apply text-5xl font-extrabold;
+  }
+  p:first-child:first-line {
+    @apply leading-tight;
+  }
+  ul {
+    @apply list-disc pl-8 pb-4;
+  }
+  .block-img {
+    img {
+      @apply py-4 mx-auto;
+    }
+  }
+}
+
+@screen md {
+  .block-img {
+    img {
+      @apply;
+    }
+  }
+}
+
 @responsive {
   .order-0 { order: 0; }
   .order-1 { order: 1; }

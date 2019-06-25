@@ -33,6 +33,7 @@ const Footer = class extends React.Component {
                 <Social
                   classes="h-8 flex items-center"
                   link="hover:text-white"
+                  svg="text-gray-500 hover:text-white"
                 />
               </div>
 
