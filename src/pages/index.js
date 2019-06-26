@@ -13,7 +13,8 @@ export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props;
     const home = data.home.data;
-    const work = data.work.nodes[0].data;
+    //const work = data.work.nodes[0].data;
+    const { edges: works } = data.work;
     const { edges: nodes } = data.posts;
     //console.log(work);
 
@@ -40,9 +41,10 @@ export default class IndexPage extends React.Component {
         {/* LATEST WORK SECTION */}
         <section id="latest-work" className="container mx-auto">
           <div className="px-4 lg:px-8">
+          {works.map(({ node: work }) => (
             <div className="flex flex-col bg-blue-800 md:flex-row">
               <div className="md:w-1/2 md:order-1">
-                <Img fluid={work.image.localFile.childImageSharp.fluid} />
+                <Img fluid={work.data.image.localFile.childImageSharp.fluid} />
               </div>
               <div className="flex flex-col md:w-1/2 md:order-0">
                 <div className="bg-blue-900">
@@ -77,10 +79,10 @@ export default class IndexPage extends React.Component {
                 <div className="px-4 py-8 flex-grow flex justify-center items-center md:px-4 lg:px-16">
                   <div className="flex flex-col">
                     <h3 className="text-3xl font-semi-bold font-robot tracking-wide pb-2 text-white md:text-2xl lg:pb-6 lg:text-4xl">
-                      {work.title.text}
+                      {work.data.title.text}
                     </h3>
                     <p className="leading-normal text-gray-200 md:text-sm lg:text-base xl:text-lg">
-                      {work.description.text}
+                      {work.data.description.text}
                     </p>
                     <div className="flex items-center pt-4 pb-5 text-gray-500 text-sm lg:py-6 xl:text-base">
                       <svg
@@ -92,7 +94,7 @@ export default class IndexPage extends React.Component {
                       >
                         <path d="M10 1l10 6-10 6L0 7l10-6zm6.67 10L20 13l-10 6-10-6 3.33-2L10 15l6.67-4z" />
                       </svg>
-                      {work.tags.raw.map(tag => (
+                      {work.data.tags.raw.map(tag => (
                         <p key={uuid.v4()} className="pl-4">
                           {tag.text}
                         </p>
@@ -102,8 +104,8 @@ export default class IndexPage extends React.Component {
                     <div>
                       <a
                         className="bg-blue-500 hover:bg-blue-600 trans-y text-white py-2 pl-6 pr-8 mb-4 rounded no-underline inline-flex items-center xl:text-xl xl:py-3"
-                        href={work.link.url}
-                        target={work.link.target}
+                        href={work.data.link.url}
+                        target={work.data.link.target}
                         rel="noopener noreferrer"
                       >
                         <svg
@@ -122,6 +124,7 @@ export default class IndexPage extends React.Component {
                 </div>
               </div>
             </div>
+          ))}
           </div>
         </section>
 
@@ -302,35 +305,37 @@ export const pageQuery = graphql`
     }
 
     work: allPrismicWork(sort: {order: DESC, fields: data___create_date}, limit: 1) {
-      nodes {
-        data {
-          create_date(formatString: "MM-DD-YYYY")
-          image {
-            localFile {
-              childImageSharp {
-                fluid(maxWidth: 600, quality: 93) {
-                  ...GatsbyImageSharpFluid
+      edges {
+        node {
+          data {
+            create_date(formatString: "MM-DD-YYYY")
+            image {
+              localFile {
+                childImageSharp {
+                  fluid(maxWidth: 600, quality: 93) {
+                    ...GatsbyImageSharpFluid
+                  }
                 }
               }
             }
-          }
-          link {
-            url
-            target
-          }
-          tags {
-            raw {
+            link {
+              url
+              target
+            }
+            tags {
+              raw {
+                text
+              }
+            }
+            title {
               text
             }
-          }
-          title {
-            text
-          }
-          description {
-            text
-          }
-          body {
-            html
+            description {
+              text
+            }
+            body {
+              html
+            }
           }
         }
       }
