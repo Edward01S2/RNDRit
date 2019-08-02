@@ -28,18 +28,13 @@ const white = {
   hover: { color: "#FFF", width: "75%", borderColor: "#FFF" }
 };
 
-const variants = {
-  visible: { opacity: 1 },
-  hidden: { opacity: 0 }
-};
-
 const WorkItem = class extends React.Component {
   constructor(props) {
     super(props);
-    (!isBrowser) ? null :
+    
     this.state = {
-      windowSize: window.innerWidth,
-      isMobile: window.innerWidth < 640
+      windowSize: (!isBrowser) ? null : window.innerWidth,
+      isMobile: (!isBrowser) ? null : window.innerWidth < 640
     };
   }
 
