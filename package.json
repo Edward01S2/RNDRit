@@ -40,9 +40,6 @@
     "tailwind.macro": "^1.0.0-alpha.10",
     "uuid": "^3.2.1"
   },
-  "resolutions": {
-    "graphql": "^14.4.2"
-  },
   "keywords": [
     "gatsby",
     "tailwind",
