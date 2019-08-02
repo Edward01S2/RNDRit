@@ -2,6 +2,8 @@ import React from "react";
 import uuid from "uuid";
 import { motion } from "framer-motion";
 
+export const isBrowser = typeof window !== "undefined"
+
 const bg = {
   hover: { width: "100%" }
 };
@@ -34,6 +36,7 @@ const variants = {
 const WorkItem = class extends React.Component {
   constructor(props) {
     super(props);
+    (!isBrowser) ? null :
     this.state = {
       windowSize: window.innerWidth,
       isMobile: window.innerWidth < 640
@@ -41,6 +44,7 @@ const WorkItem = class extends React.Component {
   }
 
   handleResize = e => {
+    if (!isBrowser) return null
     const windowSize = window.innerWidth;
     const isMobile = windowSize < 640;
     this.setState(prevState => {
@@ -173,7 +177,7 @@ const WorkItem = class extends React.Component {
 
     return (
       <div>
-        {!this.state.isMobile ? (
+        {/* {!this.state.isMobile ? (
           <motion.div
             initial="hidden"
             animate="visible"
@@ -184,11 +188,11 @@ const WorkItem = class extends React.Component {
           >
             {html}
           </motion.div>
-        ) : (
+        ) : ( */}
           <div id="work-items" className="hover:cursor-pointer">
             {html}
           </div>
-        )}
+        {/* )} */}
       </div>
     );
   }
