@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import Img from "gatsby-image";
 
 import Layout from "../components/Layout";
@@ -12,7 +12,7 @@ export default class WorkPage extends React.Component {
     const { data } = this.props;
     const workp = data.workp.data;
     const { edges: works } = data.works;
-    console.log(works[0]);
+    //console.log(works[0]);
 
     return (
       <Layout>
