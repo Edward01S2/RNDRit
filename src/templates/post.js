@@ -41,12 +41,8 @@ query BlogQuery($uid: String!) {
 }
 `
  
-const Blog = ({ data: { prismicBlog, posts }, location}) => {
+const Post = ({ data: { prismicBlog, posts }, location}) => {
   const { data } = prismicBlog
-
-  function createMarkup(cms) {
-    return { __html: cms };
-  }
   
   return (
     <Layout>
@@ -94,4 +90,4 @@ const Blog = ({ data: { prismicBlog, posts }, location}) => {
   );
 }
  
-export default Blog;
+export default Post;

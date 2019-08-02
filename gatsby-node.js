@@ -24,7 +24,7 @@ exports.createPages = async ({ actions, graphql }) => {
   //   Dark: path.resolve('./src/templates/dark.js'),
   // }
 
-  const pageTemplate = path.resolve('./src/templates/blog.js')
+  const pageTemplate = path.resolve('./src/templates/post.js')
 
   pages.data.allPrismicBlog.edges.forEach(edge => {
     createPage({

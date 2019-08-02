@@ -1,15 +1,23 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
+import Img from "gatsby-image";
+import uuid from "uuid";
+
 import Layout from "../components/Layout";
 import Tech from "../components/Tech";
 import Feature from "../components/Feature";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
-import Img from "gatsby-image";
-import uuid from "uuid";
+import WorkItem from "../components/WorkItem";
 
 export default class IndexPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.heroText = null;
+    this.heroAnim = null;
+  }
+
   render() {
     const { data } = this.props;
     const home = data.home.data;
@@ -31,7 +39,7 @@ export default class IndexPage extends React.Component {
           menuBg="bg-grey-200"
         />
 
-        {/* HERO SECTION */}
+        {/*  HERO SECTION */}
         <Hero
           heading={home.hero_title.text}
           description={home.hero_subtitle.text}
@@ -41,14 +49,19 @@ export default class IndexPage extends React.Component {
         {/* LATEST WORK SECTION */}
         <section id="latest-work" className="container mx-auto">
           <div className="px-4 lg:px-8">
-          {works.map(({ node: work }) => (
-            <div className="flex flex-col bg-blue-800 md:flex-row">
-              <div className="md:w-1/2 md:order-1">
-                <Img fluid={work.data.image.localFile.childImageSharp.fluid} />
+          <WorkItem work={works[0].node} bg="bg-blue-800"/>
+          {/* {works.map(({ node: work }) => (
+            <div className="flex flex-col md:flex-row">
+              <div className="md:w-1/2 md:order-1 bg-blue-800">
+                <div className="h-full flex justify-center items-center">
+                  <div className="px-8 w-full">
+                    <Img fluid={work.data.image.localFile.childImageSharp.fluid} />
+                  </div>
+                </div>
               </div>
-              <div className="flex flex-col md:w-1/2 md:order-0">
-                <div className="bg-blue-900">
-                  <div className="flex justify-between items-center text-gray-300 font-semibold py-4 px-4 md:py-6 lg:px-8 py-6">
+              <div className="flex flex-col bg-blue-800 md:w-1/2 md:order-0">
+                <div className="bg-blue-800">
+                  <div className="flex justify-between items-center text-gray-300 font-semibold py-4 px-4 md:py-6 py-6 lg:px-16 lg:pt-12">
                     <div>
                       <p className="uppercase text-xs tracking-wide lg:text-sm xl:text-base">
                         Latest Work
@@ -77,7 +90,7 @@ export default class IndexPage extends React.Component {
                 </div>
 
                 <div className="px-4 py-8 flex-grow flex justify-center items-center md:px-4 lg:px-16">
-                  <div className="flex flex-col">
+                  <div className="flex flex-col py-16">
                     <h3 className="text-3xl font-semi-bold font-robot tracking-wide pb-2 text-white md:text-2xl lg:pb-6 lg:text-4xl">
                       {work.data.title.text}
                     </h3>
@@ -124,7 +137,7 @@ export default class IndexPage extends React.Component {
                 </div>
               </div>
             </div>
-          ))}
+          ))} */}
           </div>
         </section>
 
@@ -244,7 +257,7 @@ export default class IndexPage extends React.Component {
                 {home.contact_description.text}
               </p>
               <Link
-                to="/about"
+                to="/contact"
                 className="bg-blue-500 hover:bg-blue-600 hover:shadow trans-y text-white py-3 px-6 rounded no-underline inline-flex items-center text-lg xl:text-xl"
               >
                 {home.contact_button.text}
@@ -311,11 +324,7 @@ export const pageQuery = graphql`
             create_date(formatString: "MM-DD-YYYY")
             image {
               localFile {
-                childImageSharp {
-                  fluid(maxWidth: 600, quality: 93) {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
+                url
               }
             }
             link {

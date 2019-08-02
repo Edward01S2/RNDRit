@@ -56,7 +56,7 @@ const Footer = class extends React.Component {
                     </li>
                     <li>
                       <Link
-                        to="articles"
+                        to="blog"
                         className="footer-links hover:text-white"
                       >
                         Articles

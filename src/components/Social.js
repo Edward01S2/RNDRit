@@ -7,16 +7,16 @@ import Linkedin from "../img/linkedin.svg";
 const Social = ({ classes, link, svg }) => (
   <div className={classes}>
     <a href="facebook">
-      <Facebook className={`fill-current h-5 w-5 ${svg}`} />
+      <Facebook className={`fill-current h-8 w-8 ${svg}`} />
     </a>
     <a href="twitter">
-      <Twitter className={`fill-current h-5 w-5 ml-5 ${svg} md:ml-6`} />
+      <Twitter className={`fill-current h-8 w-8 ml-6 ${svg} md:ml-6`} />
     </a>
     <a href="instagram">
-      <Instagram className={`fill-current h-5 w-5 ml-5 ${svg} md:ml-6`} />
+      <Instagram className={`fill-current h-8 w-8 ml-6 ${svg} md:ml-6`} />
     </a>
     <a href="linkedin">
-      <Linkedin className={`fill-current h-5 w-5 ml-5 ${svg} md:ml-6`} />
+      <Linkedin className={`fill-current h-8 w-8 ml-6 ${svg} md:ml-6`} />
     </a>
   </div>
 );
